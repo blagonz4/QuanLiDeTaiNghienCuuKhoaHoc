@@ -1,0 +1,12 @@
+C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.csprojAssemblyReference.cache
+C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.GUI.frmMain.resources
+C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.Properties.Resources.resources
+C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.csproj.GenerateResource.cache
+C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.csproj.CoreCompileInputs.cache
+C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\bin\Debug\QuanLyDeTaiKhoaHoc.exe.config
+C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\bin\Debug\QuanLyDeTaiKhoaHoc.exe
+C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\bin\Debug\QuanLyDeTaiKhoaHoc.pdb
+C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\bin\Debug\Guna.UI2.dll
+C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.csproj.CopyComplete
+C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.exe
+C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.pdb
