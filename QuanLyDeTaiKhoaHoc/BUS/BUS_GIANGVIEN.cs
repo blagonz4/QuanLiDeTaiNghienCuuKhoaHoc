@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QuanLyDeTaiKhoaHoc.GUI;
+using QuanLyDeTaiKhoaHoc.BUS;
+using QuanLyDeTaiKhoaHoc.DTO;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
+using QuanLyDeTaiKhoaHoc.DAL;
 
 namespace QuanLyDeTaiKhoaHoc.BUS
 {
@@ -18,5 +25,11 @@ namespace QuanLyDeTaiKhoaHoc.BUS
                 return _instance;
             }
         }
+
+        public DataTable GetListGV()
+        {
+            return DAL_GIANGVIEN.Instance.LoadListGV();
+        }
+
     }
 }
