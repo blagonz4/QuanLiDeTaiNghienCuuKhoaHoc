@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using QuanLyDeTaiKhoaHoc.BUS;
 namespace QuanLyDeTaiKhoaHoc.GUI
 {
     public partial class frmMain : Form
@@ -15,6 +15,16 @@ namespace QuanLyDeTaiKhoaHoc.GUI
         public frmMain()
         {
             InitializeComponent();
+        }
+
+        private void btn_Them_Click(object sender, EventArgs e)
+        {
+            BUS_GIANGVIEN.Instance.AddGV();
+        }
+
+        private void btn_Xoa_Click(object sender, EventArgs e)
+        {
+            BUS_GIANGVIEN.Instance.SuaGV();
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using QuanLyDeTaiKhoaHoc.DAL;
 namespace QuanLyDeTaiKhoaHoc.BUS
 {
     class BUS_DETAI
@@ -17,6 +17,11 @@ namespace QuanLyDeTaiKhoaHoc.BUS
                     _instance = new BUS_DETAI();
                 return _instance;
             }
+        }
+        private BUS_DETAI() { }
+        public void AddDeTai()
+        {
+            DAL_DETAI.Instance.AddDeTai();
         }
     }
 }

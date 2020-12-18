@@ -14,7 +14,7 @@ namespace QuanLyDeTaiKhoaHoc.DTO
         private int _maHopDong;
         private int _maAccount;
         private int _maKhoa;
-
+        private DateTime _ngaySinh;
         public int maGiangVien
         {
             get => _maGiangVien;
@@ -45,12 +45,17 @@ namespace QuanLyDeTaiKhoaHoc.DTO
             get => _maKhoa;
             set => _maKhoa = value;
         }
+        public DateTime ngaySinh
+        {
+            get => _ngaySinh;
+            set => _ngaySinh = value;
+        }
         public DTO_GIANGVIEN(int maGiangVien,
                             string tenGiangVien,
                             string Nganh,
                             int maHopDong,
                             int maAccount,
-                            int maKhoa)
+                            int maKhoa,DateTime ngaySinh)
         {
             this.maGiangVien = maGiangVien;
             this.tenGiangVien = tenGiangVien;
@@ -58,6 +63,7 @@ namespace QuanLyDeTaiKhoaHoc.DTO
             this.maHopDong = maHopDong;
             this.maAccount = maAccount;
             this.maKhoa = maKhoa;
+            this.ngaySinh = ngaySinh;
         }
     }
 }
