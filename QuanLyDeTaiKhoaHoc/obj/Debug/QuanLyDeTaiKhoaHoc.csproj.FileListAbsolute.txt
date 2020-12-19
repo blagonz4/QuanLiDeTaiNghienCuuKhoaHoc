@@ -10,3 +10,15 @@ C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\bin\Deb
 C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.csproj.CopyComplete
 C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.exe
 C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.pdb
+C:\Users\Public\Downloads\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\bin\Debug\QuanLyDeTaiKhoaHoc.exe.config
+C:\Users\Public\Downloads\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\bin\Debug\QuanLyDeTaiKhoaHoc.exe
+C:\Users\Public\Downloads\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\bin\Debug\QuanLyDeTaiKhoaHoc.pdb
+C:\Users\Public\Downloads\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\bin\Debug\Guna.UI2.dll
+C:\Users\Public\Downloads\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.csprojAssemblyReference.cache
+C:\Users\Public\Downloads\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.GUI.frmMain.resources
+C:\Users\Public\Downloads\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.Properties.Resources.resources
+C:\Users\Public\Downloads\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.csproj.GenerateResource.cache
+C:\Users\Public\Downloads\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.csproj.CoreCompileInputs.cache
+C:\Users\Public\Downloads\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.csproj.CopyComplete
+C:\Users\Public\Downloads\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.exe
+C:\Users\Public\Downloads\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.pdb

@@ -25,11 +25,14 @@ namespace QuanLyDeTaiKhoaHoc.BUS
                 return _instance;
             }
         }
-
+        private BUS_GIANGVIEN() { }
         public DataTable GetListGV()
         {
             return DAL_GIANGVIEN.Instance.LoadListGV();
         }
-
+        public void AddGV()
+        {
+            DAL_GIANGVIEN.Instance.AddGV();
+        }
     }
 }

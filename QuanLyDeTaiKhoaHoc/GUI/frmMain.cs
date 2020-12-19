@@ -28,5 +28,20 @@ namespace QuanLyDeTaiKhoaHoc.GUI
         {
             dgv_GiangVien.DataSource = BUS_GIANGVIEN.Instance.GetListGV();
         }
+
+        private void dgv_GiangVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btn_Them_Click(object sender, EventArgs e)
+        {
+            BUS_GIANGVIEN.Instance.AddGV();
+        }
+
+        private void tb_ThemDT_Click(object sender, EventArgs e)
+        {
+            BUS_DETAI.Instance.AddDeTai();
+        }
     }
 }

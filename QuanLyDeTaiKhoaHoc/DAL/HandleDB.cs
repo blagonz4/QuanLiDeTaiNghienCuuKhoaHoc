@@ -33,7 +33,7 @@ namespace QuanLyDeTaiKhoaHoc.DAL
         private HandleDB() { }
         public void UpdateConnection()
         {
-            string connectionStrType = String.Format(@"Data Source=.\SQLEXPRESS;Initial Catalog=QUANLYDETAI;Integrated Security=True", Environment.MachineName);
+            string connectionStrType = String.Format(@"Data Source=MYCOMPUTER\SQLEXPRESS;Initial Catalog=QUANLYDETAI;Integrated Security=True;Context Connection=True", Environment.MachineName);
 
             SqlConnection con = new SqlConnection(connectionStrType);
             try
@@ -42,7 +42,7 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             }
             catch (Exception e)
             {
-                connectionStrType = String.Format(@"Data Source={0}\SQLEXPRESS;Initial Catalog=QUANLYDETAI;Integrated Security=True", Environment.MachineName);
+                connectionStrType = String.Format(@"Data Source=MYCOMPUTER\SQLEXPRESS;Initial Catalog=QUANLYDETAI;Integrated Security=True;Context Connection=True", Environment.MachineName);
                 Console.WriteLine(String.Format("Exception: {0}\nNew connection string: {1}", e.Message, connectionStrType));
             }
             con.Close();
