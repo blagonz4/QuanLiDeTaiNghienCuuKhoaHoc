@@ -34,5 +34,13 @@ namespace QuanLyDeTaiKhoaHoc.BUS
         {
             DAL_GIANGVIEN.Instance.AddGV();
         }
+        public void XoaGV()
+        {
+            DAL_GIANGVIEN.Instance.XoaGV();
+        }
+        public void SuaGV()
+        {
+            DAL_GIANGVIEN.Instance.SuaGV();
+        }
     }
 }

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QuanLyDeTaiKhoaHoc.DAL;
+using System.Data;
+using System.Data.SqlClient;
 namespace QuanLyDeTaiKhoaHoc.BUS
 {
     class BUS_DETAI
@@ -19,9 +21,17 @@ namespace QuanLyDeTaiKhoaHoc.BUS
             }
         }
         private BUS_DETAI() { }
+        public DataTable GetListDeTai()
+        {
+            return DAL_DETAI.Instance.LoadListDeTai();
+        }
         public void AddDeTai()
         {
             DAL_DETAI.Instance.AddDeTai();
+        }
+        public void XoaDeTai()
+        {
+            DAL_DETAI.Instance.XoaDeTai();
         }
     }
 }
