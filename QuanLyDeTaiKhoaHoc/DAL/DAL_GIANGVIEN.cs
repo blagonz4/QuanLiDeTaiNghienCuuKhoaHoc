@@ -60,6 +60,7 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             if (result > 0)
             {
                 MessageBox.Show("Thêm giảng viên thành công");
+
             }
         }
         public void XoaGV()
@@ -76,12 +77,6 @@ namespace QuanLyDeTaiKhoaHoc.DAL
         public void SuaGV()
         {
             System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMain"];
-            int id = int.Parse(((frmMain)f).tb_MaGV.Text.ToString());
-            string ten = ((frmMain)f).tb_TenGV.Text;
-            string nganh = ((frmMain)f).tb_ChuyenNganh.Text;
-            int idHopDong = int.Parse(((frmMain)f).tb_HopDong.Text.ToString());
-            int idKhoa = int.Parse(((frmMain)f).cb_Khoa.Text.ToString());
-            string ngaysinh = ((frmMain)f).dt_NgSinh.Text;
             // string UpdateQuery = "UPDATE GIANGVIEN"+
             //"SET tenGiangVien='"+"'"
             string UpdateQuery = "";
