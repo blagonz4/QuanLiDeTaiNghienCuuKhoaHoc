@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
+using QuanLyDeTaiKhoaHoc.GUI;
+using System.Windows.Forms;
 
 namespace QuanLyDeTaiKhoaHoc.DAL
 {
@@ -147,5 +151,30 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             }
 
         }*/
+        private static DAL_TRANGTHAI instance;
+        public static DAL_TRANGTHAI Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new DAL_TRANGTHAI();
+                }
+                return instance;
+            }
+            set { instance = value; }
+        }
+        public DataTable LoadListTrangThai()
+        {
+            Form main = Application.OpenForms["frmMain"];
+
+            Dictionary<string, string> param = new Dictionary<string, string>();
+
+            DataTable dt = new DataTable();
+            string LoadQuery = "";
+            LoadQuery += "SELECT * FROM TRANGTHAI";
+            dt = HandleDB.Instance.ExecuteQuery(LoadQuery, param);
+            return dt;
+        }
     }
 }

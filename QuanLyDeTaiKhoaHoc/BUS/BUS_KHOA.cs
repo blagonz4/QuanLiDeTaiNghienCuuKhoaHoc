@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QuanLyDeTaiKhoaHoc.DAL;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace QuanLyDeTaiKhoaHoc.BUS
 {
@@ -18,5 +21,11 @@ namespace QuanLyDeTaiKhoaHoc.BUS
                 return _instance;
             }
         }
+        private BUS_KHOA() { }
+        public DataTable GetListKhoa()
+        {
+            return DAL_KHOA.Instance.LoadKhoa();
+        }
+
     }
 }

@@ -332,11 +332,12 @@
             this.cb_Khoa.HoverState.Parent = this.cb_Khoa;
             this.cb_Khoa.ItemHeight = 30;
             this.cb_Khoa.ItemsAppearance.Parent = this.cb_Khoa;
-            this.cb_Khoa.Location = new System.Drawing.Point(22, 138);
+            this.cb_Khoa.Location = new System.Drawing.Point(21, 133);
             this.cb_Khoa.Name = "cb_Khoa";
             this.cb_Khoa.ShadowDecoration.Parent = this.cb_Khoa;
             this.cb_Khoa.Size = new System.Drawing.Size(200, 36);
             this.cb_Khoa.TabIndex = 17;
+            this.cb_Khoa.SelectedIndexChanged += new System.EventHandler(this.cb_Khoa_SelectedIndexChanged);
             // 
             // btn_Sua
             // 
@@ -829,6 +830,11 @@
             this.cb_CapDo2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cb_CapDo2.HoverState.Parent = this.cb_CapDo2;
             this.cb_CapDo2.ItemHeight = 30;
+            this.cb_CapDo2.Items.AddRange(new object[] {
+            "Cấp khoa",
+            "Cấp trường",
+            "Cấp bộ",
+            "Cấp nhà nước"});
             this.cb_CapDo2.ItemsAppearance.Parent = this.cb_CapDo2;
             this.cb_CapDo2.Location = new System.Drawing.Point(779, 54);
             this.cb_CapDo2.Name = "cb_CapDo2";
@@ -1063,6 +1069,7 @@
             this.cb_TrangThai3.ShadowDecoration.Parent = this.cb_TrangThai3;
             this.cb_TrangThai3.Size = new System.Drawing.Size(183, 36);
             this.cb_TrangThai3.TabIndex = 80;
+            this.cb_TrangThai3.SelectedIndexChanged += new System.EventHandler(this.cb_TrangThai3_SelectedIndexChanged);
             // 
             // label22
             // 
@@ -1205,7 +1212,7 @@
             this.dgv_DeTai.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgv_DeTai.EnableHeadersVisualStyles = false;
             this.dgv_DeTai.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_DeTai.Location = new System.Drawing.Point(5, 44);
+            this.dgv_DeTai.Location = new System.Drawing.Point(-78, -16);
             this.dgv_DeTai.Name = "dgv_DeTai";
             this.dgv_DeTai.RowHeadersVisible = false;
             this.dgv_DeTai.RowTemplate.Height = 24;
@@ -1248,6 +1255,11 @@
             this.cb_CapDo1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cb_CapDo1.HoverState.Parent = this.cb_CapDo1;
             this.cb_CapDo1.ItemHeight = 30;
+            this.cb_CapDo1.Items.AddRange(new object[] {
+            "Cấp khoa",
+            "Cấp trường",
+            "Cấp bộ",
+            "Cấp nhà nước"});
             this.cb_CapDo1.ItemsAppearance.Parent = this.cb_CapDo1;
             this.cb_CapDo1.Location = new System.Drawing.Point(778, 59);
             this.cb_CapDo1.Name = "cb_CapDo1";
@@ -1843,6 +1855,11 @@
             this.cb_CapDo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cb_CapDo.HoverState.Parent = this.cb_CapDo;
             this.cb_CapDo.ItemHeight = 30;
+            this.cb_CapDo.Items.AddRange(new object[] {
+            "Cấp khoa",
+            "Cấp trường",
+            "Cấp bộ",
+            "Cấp nhà nước"});
             this.cb_CapDo.ItemsAppearance.Parent = this.cb_CapDo;
             this.cb_CapDo.Location = new System.Drawing.Point(775, 64);
             this.cb_CapDo.Name = "cb_CapDo";

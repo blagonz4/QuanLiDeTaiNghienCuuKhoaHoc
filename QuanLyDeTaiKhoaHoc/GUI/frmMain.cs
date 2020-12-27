@@ -28,6 +28,8 @@ namespace QuanLyDeTaiKhoaHoc.GUI
         {
             dgv_GiangVien.DataSource = BUS_GIANGVIEN.Instance.GetListGV();
             dgv_DeTai.DataSource = BUS_DETAI.Instance.GetListDeTai();
+            cb_Khoa.DataSource = BUS_KHOA.Instance.GetListKhoa();
+            cb_TrangThai3.DataSource = BUS_TRANGTHAI.Instance.GetListTrangThai();
         }
 
         private void dgv_GiangVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -89,6 +91,18 @@ namespace QuanLyDeTaiKhoaHoc.GUI
                 dt_NgTH1.Text = dgv_DeTai.Rows[e.RowIndex].Cells["ngayThucHien"].Value.ToString();
                 tb_LinkDeTai2.Text = dgv_DeTai.Rows[e.RowIndex].Cells["linkDeTai"].Value.ToString();
             }
+        }
+
+        private void cb_Khoa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cb_Khoa.DisplayMember="tenKhoa";
+            cb_Khoa.ValueMember = "maKhoa";
+        }
+
+        private void cb_TrangThai3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cb_TrangThai3.DisplayMember = "tenTrangThai";
+            cb_TrangThai3.ValueMember = "maTrangThai";
         }
     }
 }
