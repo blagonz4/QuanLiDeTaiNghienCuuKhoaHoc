@@ -184,7 +184,7 @@
             this.guna2GradientButton5 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton6 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GroupBox6 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2DataGridView5 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.dgv_HD = new Guna.UI2.WinForms.Guna2DataGridView();
             this.cb_Khoa1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.tb_NgNT = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.tb_ThuKy = new Guna.UI2.WinForms.Guna2TextBox();
@@ -217,7 +217,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView4)).BeginInit();
             this.tab_HoiDong.SuspendLayout();
             this.guna2GroupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_HD)).BeginInit();
             this.SuspendLayout();
             // 
             // tab_GHDT
@@ -2528,7 +2528,7 @@
             // 
             // guna2GroupBox6
             // 
-            this.guna2GroupBox6.Controls.Add(this.guna2DataGridView5);
+            this.guna2GroupBox6.Controls.Add(this.dgv_HD);
             this.guna2GroupBox6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2GroupBox6.Location = new System.Drawing.Point(8, 211);
@@ -2538,15 +2538,15 @@
             this.guna2GroupBox6.TabIndex = 15;
             this.guna2GroupBox6.Text = "DANH SÁCH HỘI ĐỒNG";
             // 
-            // guna2DataGridView5
+            // dgv_HD
             // 
             dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView5.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
-            this.guna2DataGridView5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.guna2DataGridView5.BackgroundColor = System.Drawing.Color.Gray;
-            this.guna2DataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.guna2DataGridView5.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView5.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_HD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
+            this.dgv_HD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_HD.BackgroundColor = System.Drawing.Color.Gray;
+            this.dgv_HD.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_HD.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_HD.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2554,8 +2554,8 @@
             dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
-            this.guna2DataGridView5.ColumnHeadersHeight = 4;
+            this.dgv_HD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            this.dgv_HD.ColumnHeadersHeight = 4;
             dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2563,38 +2563,40 @@
             dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView5.DefaultCellStyle = dataGridViewCellStyle24;
-            this.guna2DataGridView5.EnableHeadersVisualStyles = false;
-            this.guna2DataGridView5.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView5.Location = new System.Drawing.Point(3, 41);
-            this.guna2DataGridView5.Name = "guna2DataGridView5";
-            this.guna2DataGridView5.RowHeadersVisible = false;
-            this.guna2DataGridView5.RowTemplate.Height = 24;
-            this.guna2DataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView5.Size = new System.Drawing.Size(1210, 327);
-            this.guna2DataGridView5.TabIndex = 0;
-            this.guna2DataGridView5.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
-            this.guna2DataGridView5.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView5.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.guna2DataGridView5.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView5.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView5.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView5.ThemeStyle.BackColor = System.Drawing.Color.Gray;
-            this.guna2DataGridView5.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView5.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView5.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.guna2DataGridView5.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView5.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView5.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView5.ThemeStyle.HeaderStyle.Height = 4;
-            this.guna2DataGridView5.ThemeStyle.ReadOnly = false;
-            this.guna2DataGridView5.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView5.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView5.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView5.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2DataGridView5.ThemeStyle.RowsStyle.Height = 24;
-            this.guna2DataGridView5.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView5.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv_HD.DefaultCellStyle = dataGridViewCellStyle24;
+            this.dgv_HD.EnableHeadersVisualStyles = false;
+            this.dgv_HD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_HD.Location = new System.Drawing.Point(3, 41);
+            this.dgv_HD.Name = "dgv_HD";
+            this.dgv_HD.RowHeadersVisible = false;
+            this.dgv_HD.RowTemplate.Height = 24;
+            this.dgv_HD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_HD.Size = new System.Drawing.Size(1210, 327);
+            this.dgv_HD.TabIndex = 0;
+            this.dgv_HD.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.dgv_HD.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_HD.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgv_HD.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgv_HD.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgv_HD.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgv_HD.ThemeStyle.BackColor = System.Drawing.Color.Gray;
+            this.dgv_HD.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_HD.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgv_HD.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_HD.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_HD.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgv_HD.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgv_HD.ThemeStyle.HeaderStyle.Height = 4;
+            this.dgv_HD.ThemeStyle.ReadOnly = false;
+            this.dgv_HD.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_HD.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_HD.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_HD.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.dgv_HD.ThemeStyle.RowsStyle.Height = 24;
+            this.dgv_HD.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_HD.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv_HD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_HD_CellClick);
+            this.dgv_HD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_HD_CellContentClick);
             // 
             // cb_Khoa1
             // 
@@ -2788,7 +2790,7 @@
             this.tab_HoiDong.ResumeLayout(false);
             this.tab_HoiDong.PerformLayout();
             this.guna2GroupBox6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_HD)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2846,14 +2848,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton5;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton6;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox6;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView5;
-        private Guna.UI2.WinForms.Guna2ComboBox cb_Khoa1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker tb_NgNT;
-        private Guna.UI2.WinForms.Guna2TextBox tb_ThuKy;
-        private Guna.UI2.WinForms.Guna2TextBox tb_PB2;
-        private Guna.UI2.WinForms.Guna2TextBox tb_PB1;
-        private Guna.UI2.WinForms.Guna2TextBox tb_ChuTichHD;
-        private Guna.UI2.WinForms.Guna2TextBox tb_MaHD;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -2936,5 +2930,13 @@
         public Guna.UI2.WinForms.Guna2ComboBox cb_Khoa;
         public Guna.UI2.WinForms.Guna2ComboBox cb_TrangThai3;
         public Guna.UI2.WinForms.Guna2TextBox tb_LinkDeTai2;
+        public Guna.UI2.WinForms.Guna2TextBox tb_MaHD;
+        public Guna.UI2.WinForms.Guna2DataGridView dgv_HD;
+        public Guna.UI2.WinForms.Guna2ComboBox cb_Khoa1;
+        public Guna.UI2.WinForms.Guna2DateTimePicker tb_NgNT;
+        public Guna.UI2.WinForms.Guna2TextBox tb_ThuKy;
+        public Guna.UI2.WinForms.Guna2TextBox tb_PB2;
+        public Guna.UI2.WinForms.Guna2TextBox tb_PB1;
+        public Guna.UI2.WinForms.Guna2TextBox tb_ChuTichHD;
     }
 }
