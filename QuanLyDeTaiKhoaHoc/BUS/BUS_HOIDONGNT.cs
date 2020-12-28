@@ -34,5 +34,10 @@ namespace QuanLyDeTaiKhoaHoc.BUS
         {
             return DAL_HOIDONGNT.Instance.LoadListHOIDONGNT();
         }
+
+        public void XoaHD()
+        {
+            DAL_HOIDONGNT.Instance.Xoa();
+        }
     }
 }

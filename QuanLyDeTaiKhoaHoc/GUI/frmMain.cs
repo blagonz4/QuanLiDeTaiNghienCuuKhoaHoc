@@ -127,5 +127,33 @@ namespace QuanLyDeTaiKhoaHoc.GUI
                 tb_LinkDeTai2.Text = dgv_DeTai.Rows[e.RowIndex].Cells["linkDeTai"].Value.ToString();
             }
         }
+
+        private void dgv_HD_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                tb_MaHD.Text = dgv_HD.Rows[e.RowIndex].Cells["maHoiDong"].Value.ToString();
+                tb_ChuTichHD.Text = dgv_HD.Rows[e.RowIndex].Cells["chuTichHoiDong"].Value.ToString();
+                tb_PB1.Text = dgv_HD.Rows[e.RowIndex].Cells["phanBien1"].Value.ToString();
+                tb_PB2.Text = dgv_HD.Rows[e.RowIndex].Cells["phanBien2"].Value.ToString();
+                tb_ThuKy.Text = dgv_HD.Rows[e.RowIndex].Cells["thuKi"].Value.ToString();
+                tb_NgNT.Text = dgv_HD.Rows[e.RowIndex].Cells["ngayNghiemThu"].Value.ToString();
+                cb_Khoa1.Text = dgv_HD.Rows[e.RowIndex].Cells["maKhoa"].Value.ToString();
+            }
+        }
+
+        private void dgv_HD_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                tb_MaHD.Text = dgv_HD.Rows[e.RowIndex].Cells["maHoiDong"].Value.ToString();
+                tb_ChuTichHD.Text = dgv_HD.Rows[e.RowIndex].Cells["chuTichHoiDong"].Value.ToString();
+                tb_PB1.Text = dgv_HD.Rows[e.RowIndex].Cells["phanBien1"].Value.ToString();
+                tb_PB2.Text = dgv_HD.Rows[e.RowIndex].Cells["phanBien2"].Value.ToString();
+                tb_ThuKy.Text = dgv_HD.Rows[e.RowIndex].Cells["thuKi"].Value.ToString();
+                tb_NgNT.Text = dgv_HD.Rows[e.RowIndex].Cells["ngayNghiemThu"].Value.ToString();
+                cb_Khoa1.Text = dgv_HD.Rows[e.RowIndex].Cells["maKhoa"].Value.ToString();
+            }
+        }
     }
 }
