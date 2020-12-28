@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QuanLyDeTaiKhoaHoc.GUI;
+using QuanLyDeTaiKhoaHoc.BUS;
+using QuanLyDeTaiKhoaHoc.DTO;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
+using QuanLyDeTaiKhoaHoc.DAL;
 
 namespace QuanLyDeTaiKhoaHoc.BUS
 {
@@ -17,6 +24,13 @@ namespace QuanLyDeTaiKhoaHoc.BUS
                     _instance = new BUS_BIENBANNT();
                 return _instance;
             }
+        }
+
+        private BUS_BIENBANNT() { }
+
+        public DataTable GetListBBNT()
+        {
+            return DAL_BIENBANNT.Instance.LoadListBBNT();
         }
     }
 }

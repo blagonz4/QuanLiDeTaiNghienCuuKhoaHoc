@@ -46,7 +46,7 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMain"];
             string AddQuery = "";
             AddQuery += "INSERT INTO GIANGVIEN(maGiangVien,tenGiangVien,Nganh,maHopDong,maAccount,maKhoa,trinhDo,ngaySinh)";
-            AddQuery += "VALUES(@maGiangVien,@tenGiangVien,@Nganh,@maHopDong,'1','1','dai hoc',@ngaySinh)";
+            AddQuery += "VALUES(@maGiangVien,@tenGiangVien,@Nganh,@maHopDong,'1',@maKhoa,'dai hoc',@ngaySinh)";
 
             Dictionary<string, string> param = new Dictionary<string, string>();
 
@@ -54,7 +54,7 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             param.Add("@tenGiangVien", ((frmMain)f).tb_TenGV.Text);
             param.Add("@Nganh", ((frmMain)f).tb_ChuyenNganh.Text);
             param.Add("@maHopDong", ((frmMain)f).tb_HopDong.Text);
-            // param.Add("@maKhoa", ((frmMain)f).cb_Khoa.Text);
+            param.Add("@maKhoa", ((frmMain)f).cb_Khoa.SelectedValue.ToString());
             param.Add("@ngaySinh", ((frmMain)f).dt_NgSinh.Value.ToString());
             int result = HandleDB.Instance.ExecuteNonQuery(AddQuery, param);
             if (result > 0)

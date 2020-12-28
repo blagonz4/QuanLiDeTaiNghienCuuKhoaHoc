@@ -28,11 +28,20 @@ namespace QuanLyDeTaiKhoaHoc.GUI
         {
             dgv_GiangVien.DataSource = BUS_GIANGVIEN.Instance.GetListGV();
             dgv_DeTai.DataSource = BUS_DETAI.Instance.GetListDeTai();
+            cb_Khoa.DataSource = BUS_KHOA.Instance.GetListKhoa();
+            cb_TrangThai3.DataSource = BUS_TRANGTHAI.Instance.GetListTrangThai();
         }
 
         private void dgv_GiangVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.RowIndex != -1)
+            {
+                tb_MaGV.Text = dgv_GiangVien.Rows[e.RowIndex].Cells["maGiangVien"].Value.ToString();
+                tb_TenGV.Text = dgv_GiangVien.Rows[e.RowIndex].Cells["tenGiangVien"].Value.ToString();
+                dt_NgSinh.Text = dgv_GiangVien.Rows[e.RowIndex].Cells["ngaySinh"].Value.ToString();
+                tb_HopDong.Text = dgv_GiangVien.Rows[e.RowIndex].Cells["maHopDong"].Value.ToString();
+                tb_ChuyenNganh.Text = dgv_GiangVien.Rows[e.RowIndex].Cells["Nganh"].Value.ToString();
+            }
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
@@ -76,6 +85,34 @@ namespace QuanLyDeTaiKhoaHoc.GUI
         }
 
         private void dgv_DeTai_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                tb_MaDT1.Text = dgv_DeTai.Rows[e.RowIndex].Cells["maDeTai"].Value.ToString();
+                tb_TenDT1.Text = dgv_DeTai.Rows[e.RowIndex].Cells["tenDeTai"].Value.ToString();
+                tb_LinhVuc1.Text = dgv_DeTai.Rows[e.RowIndex].Cells["linhVuc"].Value.ToString();
+                cb_CapDo1.Text = dgv_DeTai.Rows[e.RowIndex].Cells["capDo"].Value.ToString();
+                cb_TrangThai3.Text = dgv_DeTai.Rows[e.RowIndex].Cells["maTrangThai"].Value.ToString();
+                tb_KetQua1.Text = dgv_DeTai.Rows[e.RowIndex].Cells["ketQua"].Value.ToString();
+                tb_MaGV1.Text = dgv_DeTai.Rows[e.RowIndex].Cells["maGiangVien"].Value.ToString();
+                dt_NgTH1.Text = dgv_DeTai.Rows[e.RowIndex].Cells["ngayThucHien"].Value.ToString();
+                tb_LinkDeTai2.Text = dgv_DeTai.Rows[e.RowIndex].Cells["linkDeTai"].Value.ToString();
+            }
+        }
+
+        private void cb_Khoa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cb_Khoa.DisplayMember="tenKhoa";
+            cb_Khoa.ValueMember = "maKhoa";
+        }
+
+        private void cb_TrangThai3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cb_TrangThai3.DisplayMember = "tenTrangThai";
+            cb_TrangThai3.ValueMember = "maTrangThai";
+        }
+
+        private void dgv_DeTai_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex != -1)
             {
