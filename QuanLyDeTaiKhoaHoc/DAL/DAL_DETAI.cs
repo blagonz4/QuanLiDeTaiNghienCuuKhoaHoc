@@ -37,22 +37,35 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             dt = HandleDB.Instance.ExecuteQuery(LoadQuery, param);
             return dt;
         }
-     /*   public DataTable LoadListDeTaiDK() //LOAD DANH SÁCH ĐỀ TÀI CÓ MÃ GIẢNG VIÊN ĐANG ĐĂNG NHẬP ĐÃ ĐĂNG KÍ
+        /*   public DataTable LoadListDeTaiDK() //LOAD DANH SÁCH ĐỀ TÀI CÓ MÃ GIẢNG VIÊN ĐANG ĐĂNG NHẬP ĐÃ ĐĂNG KÍ
+           {
+               System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMain"];
+               String maGiangVien
+               DataTable dt = new DataTable();
+               string LoadQuery = "";
+               LoadQuery += "SELECE *FROM DETAI WHERE maGiangVien='" + maGiangVien + "'";
+               return dt;
+
+           }*/
+        public DataTable LoadListDeTaiChoDuyet() // load danh sách đề tài chờ duyệt trong form duyệt đề tài
         {
-            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMain"];
-            String maGiangVien
+            Form main = Application.OpenForms["frmMain"];
+
+            Dictionary<string, string> param = new Dictionary<string, string>();
+
             DataTable dt = new DataTable();
             string LoadQuery = "";
-            LoadQuery += "SELECE *FROM DETAI WHERE maGiangVien='" + maGiangVien + "'";
+            LoadQuery += "SELECT maDeTai,tenDeTai,linhVuc,capDo,maGiangVien,ngayThucHien FROM DETAI WHERE maTrangThai='1' "; // mã trạng thái =1: vừa đk chưa được duyệt
+            // cần bổ sung link đề tài
+            dt = HandleDB.Instance.ExecuteQuery(LoadQuery, param);
             return dt;
-
-        }*/
+        }
         public void AddDeTai()
         {
             System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMain"];
             string AddQuery = "";
             AddQuery += "INSERT INTO DETAI(maDeTai,tenDeTai,ngayTH,,linhVuc,capDo,ketQua,maTrangThai,maGiangVien)";
-            AddQuery += "VALUES(@maDeTai,@tenDeTai,@ngayTH,@linhVuc,@capDo,@ketQua,@maTrangThai,@maGiangVien)";
+            AddQuery += "VALUES(@maDeTai,@tenDeTai,@ngayTH,@linhVuc,@capDo,@ketQua,'1',@maGiangVien)";
 
             Dictionary<string, string> param = new Dictionary<string, string>();
 
@@ -61,7 +74,6 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             param.Add("@ngayTH", ((frmMain)f).dt_NgTH1.Value.ToString());
             param.Add("@linhVuc", ((frmMain)f).tb_LinhVuc1.Text);
             param.Add("@capDo", ((frmMain)f).cb_CapDo1.Text);
-            param.Add("@maTrangThai", ((frmMain)f).cb_TrangThai3.Text);
             param.Add("@maGiangVien", ((frmMain)f).tb_MaGV1.Text);
             int result = HandleDB.Instance.ExecuteNonQuery(AddQuery, param);
             if (result > 0)
@@ -110,5 +122,18 @@ namespace QuanLyDeTaiKhoaHoc.DAL
                 MessageBox.Show("Sửa đề tài thành công");
             }
         }
+        public void DuyetDeTai()
+        {
+            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMain"];
+            string DuyetDeTai = "";
+            DuyetDeTai += "UPDATE DETAI SET maTrangThai='2' WHERE maDeTai=@maDeTai";
+            Dictionary<string, string> param = new Dictionary<string, string>();
+            param.Add("@maDeTai", ((frmMain)f).tb_MaDT1.Text);
+            int result = HandleDB.Instance.ExecuteNonQuery(DuyetDeTai, param);
+            if (result > 0)
+            {
+                MessageBox.Show("Duyệt đề tài thành công");
+            }
+        } // còn thiếu duyệt theo cấp độ
     }
 }

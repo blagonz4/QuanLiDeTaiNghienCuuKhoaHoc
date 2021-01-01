@@ -34,3 +34,15 @@ C:\Users\B365M AORUS ELite\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\De
 C:\Users\B365M AORUS ELite\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.csproj.CopyComplete
 C:\Users\B365M AORUS ELite\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.exe
 C:\Users\B365M AORUS ELite\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.pdb
+C:\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\bin\Debug\QuanLyDeTaiKhoaHoc.exe.config
+C:\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\bin\Debug\QuanLyDeTaiKhoaHoc.exe
+C:\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\bin\Debug\QuanLyDeTaiKhoaHoc.pdb
+C:\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\bin\Debug\Guna.UI2.dll
+C:\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.csprojAssemblyReference.cache
+C:\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.GUI.frmMain.resources
+C:\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.Properties.Resources.resources
+C:\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.csproj.GenerateResource.cache
+C:\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.csproj.CoreCompileInputs.cache
+C:\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.csproj.CopyComplete
+C:\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.exe
+C:\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.pdb

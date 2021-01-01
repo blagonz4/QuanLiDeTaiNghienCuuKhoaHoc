@@ -30,6 +30,7 @@ namespace QuanLyDeTaiKhoaHoc.GUI
             dgv_DeTai.DataSource = BUS_DETAI.Instance.GetListDeTai();
             cb_Khoa.DataSource = BUS_KHOA.Instance.GetListKhoa();
             cb_TrangThai3.DataSource = BUS_TRANGTHAI.Instance.GetListTrangThai();
+            dgv_DuyetDeTai.DataSource = BUS_DETAI.Instance.GetListDeTaiChoDuyet();
         }
 
         private void dgv_GiangVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -154,6 +155,25 @@ namespace QuanLyDeTaiKhoaHoc.GUI
                 tb_NgNT.Text = dgv_HD.Rows[e.RowIndex].Cells["ngayNghiemThu"].Value.ToString();
                 cb_Khoa1.Text = dgv_HD.Rows[e.RowIndex].Cells["maKhoa"].Value.ToString();
             }
+        }
+
+        private void dgv_DuyetDeTai_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                tb_MaDT2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["maDeTai"].Value.ToString();
+                tb_TenDT2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["tenDeTai"].Value.ToString();
+                tb_LinhVuc2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["linhVuc"].Value.ToString();
+                cb_CapDo2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["capDo"].Value.ToString();
+                tb_MaGV3.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["maGiangVien"].Value.ToString();
+                dt_NgTH2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["ngayThucHien"].Value.ToString();
+                // thiếu link đề tài
+            }
+        }
+
+        private void btn_DuyetDeTai_Click(object sender, EventArgs e)
+        {
+            BUS_DETAI.Instance.DuyetDeTai();
         }
     }
 }

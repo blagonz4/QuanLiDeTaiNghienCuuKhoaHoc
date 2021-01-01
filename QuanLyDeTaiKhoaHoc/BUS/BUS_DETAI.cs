@@ -33,5 +33,13 @@ namespace QuanLyDeTaiKhoaHoc.BUS
         {
             DAL_DETAI.Instance.XoaDeTai();
         }
+        public DataTable GetListDeTaiChoDuyet()
+        {
+            return DAL_DETAI.Instance.LoadListDeTaiChoDuyet();
+        }
+        public void DuyetDeTai()
+        {
+            DAL_DETAI.Instance.DuyetDeTai();
+        }
     }
 }
