@@ -15,8 +15,11 @@ namespace QuanLyDeTaiKhoaHoc.DAL
     public class HandleDB
     {
         private static readonly Lazy<HandleDB> instance = new Lazy<HandleDB>(() => new HandleDB());
-        private string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=QUANLYDETAI;Integrated Security=True";
-      
+        //   private string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=QUANLYDETAI;Integrated Security=True";
+
+        // Lam CR
+        private string connectionSTR = @"Data Source=DESKTOP-9OUV00A;Initial Catalog = QUANLYDETAI; Integrated Security = True";
+
 
         private static HandleDB _instance;
         public static HandleDB Instance

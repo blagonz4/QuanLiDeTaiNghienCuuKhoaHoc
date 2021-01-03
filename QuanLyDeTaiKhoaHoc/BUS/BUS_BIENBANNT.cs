@@ -32,5 +32,11 @@ namespace QuanLyDeTaiKhoaHoc.BUS
         {
             return DAL_BIENBANNT.Instance.LoadListBBNT();
         }
+
+
+        public void AddBB()
+        {
+            DAL_BIENBANNT.Instance.Add();
+        }
     }
 }

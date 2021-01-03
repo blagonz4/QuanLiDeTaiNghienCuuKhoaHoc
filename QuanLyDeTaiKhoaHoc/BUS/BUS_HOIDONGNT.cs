@@ -39,5 +39,15 @@ namespace QuanLyDeTaiKhoaHoc.BUS
         {
             DAL_HOIDONGNT.Instance.Xoa();
         }
+
+        public void ThemHD()
+        {
+            DAL_HOIDONGNT.Instance.Add();
+        }
+
+        public void SuaHD()
+        {
+            DAL_HOIDONGNT.Instance.Sua();
+        }
     }
 }
