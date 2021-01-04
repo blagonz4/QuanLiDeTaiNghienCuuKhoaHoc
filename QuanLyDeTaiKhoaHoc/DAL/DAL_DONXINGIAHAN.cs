@@ -38,7 +38,8 @@ namespace QuanLyDeTaiKhoaHoc.DAL
 
             DataTable dt = new DataTable();
             string LoadQuery = "";
-            LoadQuery += "SELECT * FROM DONXINGIAHAN";
+            LoadQuery += "SELECT maDonXinGiaHan, DONXINGIAHAN.maGiangVien, ngayGiaHan, ngayHoanThanh, isAccept FROM DONXINGIAHAN, CHITIETDONXINGIAHAN, GIANGVIEN" +
+                " WHERE GIANGVIEN.maGiangVien = DONXINGIAHAN.maGiangVien and DONXINGIAHAN.maCTDXGH = CHITIETDONXINGIAHAN.maCTDXGH ";
             dt = HandleDB.Instance.ExecuteQuery(LoadQuery, param);
             return dt;
         }

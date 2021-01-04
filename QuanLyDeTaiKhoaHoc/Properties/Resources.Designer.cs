@@ -67,5 +67,16 @@ namespace QuanLyDeTaiKhoaHoc.Properties
                 resourceCulture = value;
             }
         }
+
+
+
+        internal static System.Drawing.Bitmap pill
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("pill", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
