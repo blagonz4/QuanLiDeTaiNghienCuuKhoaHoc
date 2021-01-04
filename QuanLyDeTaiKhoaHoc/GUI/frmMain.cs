@@ -41,7 +41,7 @@ namespace QuanLyDeTaiKhoaHoc.GUI
             dgv_DuyetDeTai.DataSource = BUS_DETAI.Instance.GetListDeTaiChoDuyet();
             dgv_HD.DataSource = BUS_HOIDONGNT.Instance.GetListHOIDONGNT();
             dgv_BBNT.DataSource = BUS_BIENBANNT.Instance.GetListBBNT();
-
+            dgv_GiaHan.DataSource = BUS_DONXINGIAHAN.Instance.GetListDXGH();
 
         }
 
@@ -360,6 +360,42 @@ namespace QuanLyDeTaiKhoaHoc.GUI
                 }
             }
 
+        }
+
+        private void btn_DuyetGiaHan_Click(object sender, EventArgs e)
+        {
+            BUS_DONXINGIAHAN.Instance.DuyetGiaHan();
+            dgv_GiaHan.DataSource = BUS_DONXINGIAHAN.Instance.GetListDXGH();
+        }
+
+        private void btn_GiaHan_Click(object sender, EventArgs e)
+        {
+            BUS_DONXINGIAHAN.Instance.GiaHanDeTai();
+            BUS_DONXINGIAHAN.Instance.SetTrangThaiGiaHan();
+        }
+
+        private void dgv_GiaHan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                tb_maDXGH.Text = dgv_GiaHan.Rows[e.RowIndex].Cells["maDonXinGiaHan"].Value.ToString();
+                tb_maGV4.Text = dgv_GiaHan.Rows[e.RowIndex].Cells["maGiangVien"].Value.ToString();
+                tb_maDeTai3.Text = dgv_GiaHan.Rows[e.RowIndex].Cells["maDeTai"].Value.ToString();
+                dt_NgayHoanThanh.Text = dgv_GiaHan.Rows[e.RowIndex].Cells["ngayHoanThanh"].Value.ToString();
+                dt_NgayGH.Text = dgv_GiaHan.Rows[e.RowIndex].Cells["ngayGiaHan"].Value.ToString();
+            }
+        }
+
+        private void dgv_GiaHan_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                tb_maDXGH.Text = dgv_GiaHan.Rows[e.RowIndex].Cells["maDonXinGiaHan"].Value.ToString();
+                tb_maGV4.Text = dgv_GiaHan.Rows[e.RowIndex].Cells["maGiangVien"].Value.ToString();
+                tb_maDeTai3.Text = dgv_GiaHan.Rows[e.RowIndex].Cells["maDeTai"].Value.ToString();
+                dt_NgayHoanThanh.Text = dgv_GiaHan.Rows[e.RowIndex].Cells["ngayHoanThanh"].Value.ToString();
+                dt_NgayGH.Text = dgv_GiaHan.Rows[e.RowIndex].Cells["ngayGiaHan"].Value.ToString();
+            }
         }
     }
 }

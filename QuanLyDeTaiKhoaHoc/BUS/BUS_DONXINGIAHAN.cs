@@ -34,5 +34,17 @@ namespace QuanLyDeTaiKhoaHoc.BUS
         {
             return DAL_DONXINGIAHAN.Instance.LoadListDXGH();
         }
+        public void DuyetGiaHan()
+        {
+            DAL_DONXINGIAHAN.Instance.DuyetGiaHan();
+        }
+        public void GiaHanDeTai()
+        {
+            DAL_DONXINGIAHAN.Instance.GiaHanDeTai();
+        }
+        public void SetTrangThaiGiaHan()
+        {
+            DAL_DONXINGIAHAN.Instance.SetTrangThaiGiaHan();
+        }
     }
 }
