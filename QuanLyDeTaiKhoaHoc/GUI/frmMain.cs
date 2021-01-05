@@ -173,12 +173,12 @@ namespace QuanLyDeTaiKhoaHoc.GUI
         {
             if (e.RowIndex != -1)
             {
-                tb_MaDT2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["maDeTai"].Value.ToString();
-                tb_TenDT2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["tenDeTai"].Value.ToString();
-                tb_LinhVuc2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["linhVuc"].Value.ToString();
-                cb_CapDo2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["capDo"].Value.ToString();
+                tb_MaDT2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["maDeTai3"].Value.ToString();
+                tb_TenDT2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["tenDeTai3"].Value.ToString();
+                tb_LinhVuc2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["linhVuc3"].Value.ToString();
+                cb_CapDo2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["capDo3"].Value.ToString();
                 tb_MaGV3.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["maGiangVien"].Value.ToString();
-                dt_NgTH2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["ngayThucHien"].Value.ToString();
+                dt_NgTH2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["ngayThucHien3"].Value.ToString();
                 // thiếu link đề tài
             }
         }
@@ -192,12 +192,12 @@ namespace QuanLyDeTaiKhoaHoc.GUI
         {
             if (e.RowIndex != -1)
             {
-                tb_MaDT2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["maDeTai"].Value.ToString();
-                tb_TenDT2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["tenDeTai"].Value.ToString();
-                tb_LinhVuc2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["linhVuc"].Value.ToString();
-                cb_CapDo2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["capDo"].Value.ToString();
+                tb_MaDT2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["maDeTai3"].Value.ToString();
+                tb_TenDT2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["tenDeTai3"].Value.ToString();
+                tb_LinhVuc2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["linhVuc3"].Value.ToString();
+                cb_CapDo2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["capDo3"].Value.ToString();
                 tb_MaGV3.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["maGiangVien"].Value.ToString();
-                dt_NgTH2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["ngayThucHien"].Value.ToString();
+                dt_NgTH2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["ngayThucHien3"].Value.ToString();
                 // thiếu link đề tài
             }
         }
@@ -395,6 +395,34 @@ namespace QuanLyDeTaiKhoaHoc.GUI
                 tb_maDeTai3.Text = dgv_GiaHan.Rows[e.RowIndex].Cells["maDeTai"].Value.ToString();
                 dt_NgayHoanThanh.Text = dgv_GiaHan.Rows[e.RowIndex].Cells["ngayHoanThanh"].Value.ToString();
                 dt_NgayGH.Text = dgv_GiaHan.Rows[e.RowIndex].Cells["ngayGiaHan"].Value.ToString();
+            }
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                tb_MaDT2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["maDeTai1"].Value.ToString();
+                tb_TenDT2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["tenDeTai1"].Value.ToString();
+                tb_LinhVuc2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["linhVuc1"].Value.ToString();
+                cb_CapDo2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["capDo1"].Value.ToString();
+                tb_MaGV3.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["maGiangVien1"].Value.ToString();
+                dt_NgTH2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["ngayThucHien1"].Value.ToString();
+                // thiếu link đề tài
+            }
+        }
+
+        private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                tb_MaDT2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["maDeTai1"].Value.ToString();
+                tb_TenDT2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["tenDeTai1"].Value.ToString();
+                tb_LinhVuc2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["linhVuc1"].Value.ToString();
+                cb_CapDo2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["capDo1"].Value.ToString();
+                tb_MaGV3.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["maGiangVien1"].Value.ToString();
+                dt_NgTH2.Text = dgv_DuyetDeTai.Rows[e.RowIndex].Cells["ngayThucHien1"].Value.ToString();
+                // thiếu link đề tài
             }
         }
     }
