@@ -38,5 +38,11 @@ namespace QuanLyDeTaiKhoaHoc.BUS
         {
             DAL_BIENBANNT.Instance.Add();
         }
+
+
+        public int GetNextID()
+        {
+            return DAL_BIENBANNT.Instance.GetNextID();
+        }
     }
 }

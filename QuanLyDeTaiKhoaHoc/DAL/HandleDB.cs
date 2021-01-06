@@ -18,7 +18,7 @@ namespace QuanLyDeTaiKhoaHoc.DAL
           // private string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=QUANLYDETAI;Integrated Security=True";
 
         // Lam CR
-        private string connectionSTR = @"Data Source=DESKTOP-9OUV00A;Initial Catalog = QUANLYDETAI; Integrated Security = True";
+        private string connectionSTR = @"Data Source=localhost;Initial Catalog=QUANLYDETAI;Integrated Security=True";
 
 
         private static HandleDB _instance;
@@ -36,7 +36,7 @@ namespace QuanLyDeTaiKhoaHoc.DAL
         private HandleDB() { }
         public void UpdateConnection()
         {
-            string connectionStrType = String.Format(@"Data Source=MYCOMPUTER\SQLEXPRESS;Initial Catalog=QUANLYDETAI;Integrated Security=True;Context Connection=True", Environment.MachineName);
+            string connectionStrType = String.Format(@"Data Source=localhost;Initial Catalog=QUANLYDETAI;Integrated Security=True;Context Connection=True", Environment.MachineName);
 
             SqlConnection con = new SqlConnection(connectionStrType);
             try
@@ -45,7 +45,7 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             }
             catch (Exception e)
             {
-                connectionStrType = String.Format(@"Data Source=MYCOMPUTER\SQLEXPRESS;Initial Catalog=QUANLYDETAI;Integrated Security=True;Context Connection=True", Environment.MachineName);
+                connectionStrType = String.Format(@"Data Source=localhost;Initial Catalog=QUANLYDETAI;Integrated Security=True;Context Connection=True", Environment.MachineName);
                 Console.WriteLine(String.Format("Exception: {0}\nNew connection string: {1}", e.Message, connectionStrType));
             }
             con.Close();

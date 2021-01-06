@@ -41,7 +41,7 @@ namespace QuanLyDeTaiKhoaHoc.GUI
             dgv_DuyetDeTai.DataSource = BUS_DETAI.Instance.GetListDeTaiChoDuyet();
             dgv_HD.DataSource = BUS_HOIDONGNT.Instance.GetListHOIDONGNT();
             dgv_BBNT.DataSource = BUS_BIENBANNT.Instance.GetListBBNT();
-            dgv_GiaHan.DataSource = BUS_DONXINGIAHAN.Instance.GetListDXGH();
+        //    dgv_GiaHan.DataSource = BUS_DONXINGIAHAN.Instance.GetListDXGH();
 
         }
 
@@ -204,6 +204,7 @@ namespace QuanLyDeTaiKhoaHoc.GUI
 
         private void btn_ThemHD_Click(object sender, EventArgs e)
         {
+            tb_MaHD.Text = BUS_HOIDONGNT.Instance.GetNextID().ToString();
             BUS_HOIDONGNT.Instance.ThemHD();
             dgv_HD.DataSource = BUS_HOIDONGNT.Instance.GetListHOIDONGNT();
         }
@@ -233,6 +234,8 @@ namespace QuanLyDeTaiKhoaHoc.GUI
                 tb_MaHD1.Text = dgv_BBNT.Rows[e.RowIndex].Cells["maHoiDong1"].Value.ToString();
                 tb_TongDiem.Text = dgv_BBNT.Rows[e.RowIndex].Cells["tongDiem"].Value.ToString();
                 tb_NhanXet.Text = dgv_BBNT.Rows[e.RowIndex].Cells["nhanXet"].Value.ToString();
+                tb_MaDT5.Text = dgv_BBNT.Rows[e.RowIndex].Cells["maDeTai"].Value.ToString();
+                tb_LinkBienBan.Text = dgv_BBNT.Rows[e.RowIndex].Cells["linkBienBan"].Value.ToString();
             }
         }
         private void dgv_BBNT_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -243,11 +246,14 @@ namespace QuanLyDeTaiKhoaHoc.GUI
                 tb_MaHD1.Text = dgv_BBNT.Rows[e.RowIndex].Cells["maHoiDong1"].Value.ToString();
                 tb_TongDiem.Text = dgv_BBNT.Rows[e.RowIndex].Cells["tongDiem"].Value.ToString();
                 tb_NhanXet.Text = dgv_BBNT.Rows[e.RowIndex].Cells["nhanXet"].Value.ToString();
+                tb_MaDT5.Text = dgv_BBNT.Rows[e.RowIndex].Cells["maDeTai"].Value.ToString();
+                tb_LinkBienBan.Text = dgv_BBNT.Rows[e.RowIndex].Cells["linkBienBan"].Value.ToString();
             }
         }
 
         private void btn_ThemBB_Click(object sender, EventArgs e)
         {
+            tb_MaBB.Text = BUS_BIENBANNT.Instance.GetNextID().ToString();
             BUS_BIENBANNT.Instance.AddBB();
             dgv_BBNT.DataSource = BUS_BIENBANNT.Instance.GetListBBNT();
         }
@@ -304,20 +310,26 @@ namespace QuanLyDeTaiKhoaHoc.GUI
             string maHD = String.Format("Mã hội đồng: {0}", tb_MaHD1.Text);
             string nhanxet = String.Format("Nhận xét: {0}", tb_MaHD1.Text);
             string tongdiem= String.Format("Tổng điểm: {0}", tb_TongDiem.Text);
+            string madetai = String.Format("Mã đề tài: {0}", tb_MaDT5.Text);
+            string linkbb = String.Format("Link biên bản: {0}", tb_LinkBienBan.Text);
 
             string listHeader = String.Empty;
             listHeader += String.Format("{0,-15}", "Mã biên bản");
             listHeader += String.Format("{0,-15}", "Mã hội đồng");
+            listHeader += String.Format("{0,-15}", "Mã đề tài");
             listHeader += String.Format("{0,-15}", "Nhận xét");
             listHeader += String.Format("{0,-15}", "Tổng điểm");
+            listHeader += String.Format("{0,-15}", "Link biên bản");
 
 
             Graphics graphic = e.Graphics;
             graphic.DrawString(" Biên bản nghiệm thu", new Font("Courier New", 18, FontStyle.Bold), new SolidBrush(Color.Red), startX, 0);
             graphic.DrawString(maBB, font, brush, startX, startY + 20);
             graphic.DrawString(maHD, font, brush, startX, startY + 40);
+            graphic.DrawString(madetai, font, brush, startX, startY + 40);
             graphic.DrawString(nhanxet, font, brush, startX, startY + 40);
             graphic.DrawString(tongdiem, font, brush, startX, startY + 40);
+            graphic.DrawString(linkbb, font, brush, startX, startY + 40);
 
             graphic.DrawString("--------------------------------", font, brush, startX, startY + 60);
 
