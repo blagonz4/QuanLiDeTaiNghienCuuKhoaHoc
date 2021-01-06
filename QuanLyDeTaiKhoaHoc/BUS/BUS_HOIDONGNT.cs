@@ -49,5 +49,9 @@ namespace QuanLyDeTaiKhoaHoc.BUS
         {
             DAL_HOIDONGNT.Instance.Sua();
         }
+        public int GetNextID()
+        {
+            return DAL_HOIDONGNT.Instance.GetNextID();
+        }
     }
 }

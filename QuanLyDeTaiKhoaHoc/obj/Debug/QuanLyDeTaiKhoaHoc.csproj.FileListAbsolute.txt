@@ -1,4 +1,3 @@
-C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.csprojAssemblyReference.cache
 C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.GUI.frmMain.resources
 C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.Properties.Resources.resources
 C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.csproj.GenerateResource.cache
