@@ -52,7 +52,7 @@ namespace QuanLyDeTaiKhoaHoc.DAL
 
             DataTable dt = new DataTable();
 
-          //  string MaHD = ((frmMain)main).tb_MaHD.Text.ToString();
+            string MaHD = ((frmMain)main).tb_MaHD.Text.ToString();
             string ChuTich = ((frmMain)main).tb_ChuTichHD.Text.ToString();
             string PB1 = ((frmMain)main).tb_PB1.Text.ToString();
             string PB2 = ((frmMain)main).tb_PB2.Text.ToString();
@@ -60,11 +60,11 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             string ThuKy = ((frmMain)main).tb_ThuKy.Text.ToString();
 
             string maKhoa = ((frmMain)main).cb_Khoa1.Text.ToString();
-
+            
 
             string AddQuery = String.Empty;
 
-            AddQuery = "INSERT INTO HOIDONGNGHIEMTHU (chuTichHoiDong, phanbien1,phanbien2,ngayNghiemThu,thuKi, maKhoa) values ('" + ChuTich + "','" + PB1 + "', '" + PB2 + "','" + NgNT + "','" + ThuKy + "','" + maKhoa + "')";
+            AddQuery = "INSERT INTO HOIDONGNGHIEMTHU (maHoiDong,chuTichHoiDong, phanbien1,phanbien2,ngayNghiemThu,thuKi, maKhoa) values ('" + MaHD + "',N'" + ChuTich + "',N'" + PB1 + "',N'" + PB2 + "','" + NgNT + "',N'" + ThuKy + "','" + maKhoa + "')";
 
             int result = HandleDB.Instance.ExecuteNonQuery(AddQuery, param);
 
@@ -97,7 +97,7 @@ namespace QuanLyDeTaiKhoaHoc.DAL
 
 
             string UpdateQuery = "UPDATE HOIDONGNGHIEMTHU " +
-             "SET  chuTichHoiDong = '" + ChuTich + "', phanBien1 = '" + PB1 + "', PhanBien2 = '" + PB2 + "', ngayNghiemThu ='" + NgNT + "', thuKi ='" + ThuKy + "' ,maKhoa ='" + maKhoa + "' WHERE maHoiDong = '" + MaHD + "' ";
+             "SET  chuTichHoiDong = N'" + ChuTich + "', phanBien1 = N'" + PB1 + "', PhanBien2 = N'" + PB2 + "', ngayNghiemThu ='" + NgNT + "', thuKi =N'" + ThuKy + "' ,maKhoa ='" + maKhoa + "' WHERE maHoiDong = '" + MaHD + "' ";
        
 
 
@@ -122,7 +122,24 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             }
         }
 
+        public int GetNextID()
+        {
+            int nextID = 1;
 
-     
+            string Query = String.Empty;
+            Query += "SELECT TOP 1 MaHoiDong FROM HOIDONGNGHIEMTHU ";
+            Query += "ORDER BY MaHoiDong DESC";
+
+            DataTable dt = HandleDB.Instance.ExecuteQuery(Query, null);
+            if (dt.Rows.Count > 0)
+            {
+                Int32.TryParse(dt.Rows[0]["MaHoiDong"].ToString(), out nextID);
+                ++nextID;
+            }
+            return nextID;
+        }
+
+
+
     }
 }
