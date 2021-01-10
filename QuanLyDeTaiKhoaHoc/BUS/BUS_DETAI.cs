@@ -41,10 +41,18 @@ namespace QuanLyDeTaiKhoaHoc.BUS
         {
             DAL_DETAI.Instance.DuyetDeTai();
         }
-
+        public void SuaDeTai()
+        {
+            DAL_DETAI.Instance.SuaDeTai();
+        }
         public int GetnextID()
         {
             return DAL_DETAI.Instance.GetNextID();
+        }
+
+        public void Updateketqua(string ketQua)
+        {
+            DAL_DETAI.Instance.Updateketqua(ketQua);
         }
     }
 }

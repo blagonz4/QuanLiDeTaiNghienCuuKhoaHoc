@@ -59,7 +59,7 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             string NgNT = ((frmMain)main).tb_NgNT.Value.ToString("MM/dd/yyyy");
             string ThuKy = ((frmMain)main).tb_ThuKy.Text.ToString();
 
-            string maKhoa = ((frmMain)main).cb_Khoa1.Text.ToString();
+            string maKhoa = ((frmMain)main).cb_Khoa1.SelectedValue.ToString();
             
 
             string AddQuery = String.Empty;
@@ -92,7 +92,7 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             string NgNT = ((frmMain)f).tb_NgNT.Value.ToString("MM/dd/yyyy");
             string ThuKy = ((frmMain)f).tb_ThuKy.Text.ToString();
 
-            string maKhoa = ((frmMain)f).cb_Khoa1.Text.ToString();
+            string maKhoa = ((frmMain)f).cb_Khoa1.SelectedValue.ToString();
 
 
 

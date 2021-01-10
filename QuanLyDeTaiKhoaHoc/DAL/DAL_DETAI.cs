@@ -96,16 +96,15 @@ namespace QuanLyDeTaiKhoaHoc.DAL
         {
             System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMain"];
             string UpdateQuery = "";
-            UpdateQuery += "UPDATE GIANGVIEN SET";
-            UpdateQuery += "maDeTai=@maDeTai";
-            UpdateQuery += "tenDeTai=@tenDeTai";
-            UpdateQuery += "maGiangVien=@maGiangVien";
-            UpdateQuery += "linhVuc=@linhVuc";
-            UpdateQuery += "capDo=@capDo";
-            UpdateQuery += "ketQua=@ketQua";
-            UpdateQuery += "maGiangVien=@maGiangVien";
-            UpdateQuery += "ngayTH=@ngayTH";
+            UpdateQuery += "UPDATE DETAI SET ";
+            UpdateQuery += "tenDeTai=@tenDeTai,";
+            UpdateQuery += "maGiangVien=@maGiangVien,";
+            UpdateQuery += "linhVuc=@linhVuc,";
+            UpdateQuery += "capDo=@capDo,";
+            UpdateQuery += "ketQua=@ketQua,";
+            UpdateQuery += "ngayThucHien=@ngayTH,";
             UpdateQuery += "linkDeTai=@linkDeTai";
+            UpdateQuery += " WHERE maDeTai=@maDeTai";
             Dictionary<string, string> param = new Dictionary<string, string>();
             param.Add("@maDeTai", ((frmMain)f).tb_MaDT1.Text);
             param.Add("@tenDeTai", ((frmMain)f).tb_TenDT1.Text);
@@ -113,7 +112,6 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             param.Add("@linhVuc", ((frmMain)f).tb_LinhVuc1.Text);
             param.Add("@capDo", ((frmMain)f).cb_CapDo1.Text);
             param.Add("@ketQua", ((frmMain)f).tb_KetQua1.Text);
-            param.Add("@maTrangThai", ((frmMain)f).cb_TrangThai3.Text);
             param.Add("@maGiangVien", ((frmMain)f).tb_MaGV1.Text);
             param.Add("@linkDeTai", ((frmMain)f).tb_LinkDeTai2.Text);
             int result = HandleDB.Instance.ExecuteNonQuery(UpdateQuery, param);
@@ -150,6 +148,26 @@ namespace QuanLyDeTaiKhoaHoc.DAL
                 ++nextID;
             }
             return nextID;
+        }
+
+
+        public void Updateketqua(string ketQua)
+        {
+            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMain"];
+            string UpdateQuery = "";
+            UpdateQuery += "UPDATE DETAI SET ";
+            UpdateQuery += "ketQua=@ketQua ";
+            UpdateQuery += "WHERE maDeTai = @maDeTai ";
+
+            Dictionary<string, string> param = new Dictionary<string, string>();
+            param.Add("@ketQua", ketQua);
+            param.Add("@maDeTai", ((frmMain)f).tb_MaDT5.Text);
+
+            int result = HandleDB.Instance.ExecuteNonQuery(UpdateQuery, param);
+            if (result > 0)
+            {
+                MessageBox.Show("Cập nhật kết quả đề tài thành công");
+            }
         }
     }
 }

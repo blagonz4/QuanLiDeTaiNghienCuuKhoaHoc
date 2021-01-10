@@ -37,7 +37,7 @@ namespace QuanLyDeTaiKhoaHoc.DAL
 
             DataTable dt = new DataTable();
             string LoadQuery = "";
-            LoadQuery += "SELECT * FROM GIANGVIEN";
+            LoadQuery += "SELECT maGiangVien, tenGiangVien,Nganh, trinhDo, ngaySinh, GIANGVIEN.maKhoa, tenKhoa ,maHopDong, maAccount FROM GIANGVIEN ,KHOA where KHOA.maKhoa = GIANGVIEN.maKhoa ";
             dt = HandleDB.Instance.ExecuteQuery(LoadQuery, param);
             return dt;
         }
@@ -81,21 +81,22 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             // string UpdateQuery = "UPDATE GIANGVIEN"+
             //"SET tenGiangVien='"+"'"
             string UpdateQuery = "";
-            UpdateQuery += "UPDATE GIANGVIEN SET";
-            UpdateQuery += "tenGiangVien=@tenGiangVien";
-            UpdateQuery += "maGiangVien=@maGiangVien";
-            UpdateQuery += "Nganh=@Nganh";
-            UpdateQuery += "maHopDong=@maHopDong";
-            UpdateQuery += "maAccount=@maAccount";
-            UpdateQuery += "maKhoa=@maKhoa";
-            UpdateQuery += "trinhDo=@trinhDo";
-            UpdateQuery += "ngaySinh=@ngaySinh";
+            UpdateQuery += "UPDATE GIANGVIEN SET ";
+            UpdateQuery += "tenGiangVien=@tenGiangVien,";
+      
+            UpdateQuery += "Nganh=@Nganh,";
+            UpdateQuery += "maHopDong=@maHopDong,";
+            UpdateQuery += "maKhoa=@maKhoa,";
+            UpdateQuery += "trinhDo=@trinhDo,";
+            UpdateQuery += "ngaySinh=@ngaySinh ";
+            UpdateQuery += "WHERE maGiangVien = @maGiangVien";
             Dictionary<string, string> param = new Dictionary<string, string>();
             param.Add("@maGiangVien", ((frmMain)f).tb_MaGV.Text);
             param.Add("@tenGiangVien", ((frmMain)f).tb_TenGV.Text);
             param.Add("@Nganh", ((frmMain)f).tb_ChuyenNganh.Text);
             param.Add("@maHopDong", ((frmMain)f).tb_HopDong.Text);
-            // param.Add("@maKhoa", ((frmMain)f).cb_Khoa.Text);
+            param.Add("@maKhoa", ((frmMain)f).cb_Khoa.SelectedValue.ToString());
+            param.Add("@trinhDo", ((frmMain)f).tb_trinhDo.Text);
             param.Add("@ngaySinh", ((frmMain)f).dt_NgSinh.Value.ToString());
             int result = HandleDB.Instance.ExecuteNonQuery(UpdateQuery, param);
             if (result > 0)
@@ -109,7 +110,7 @@ namespace QuanLyDeTaiKhoaHoc.DAL
 
             string Query = String.Empty;
             Query += "SELECT TOP 1 maGiangVien FROM GIANGVIEN ";
-            Query += "ORDER BY maGiangVIen DESC";
+            Query += "ORDER BY maGiangVien DESC";
 
             DataTable dt = HandleDB.Instance.ExecuteQuery(Query, null);
             if (dt.Rows.Count > 0)

@@ -38,7 +38,7 @@ namespace QuanLyDeTaiKhoaHoc.DAL
 
             DataTable dt = new DataTable();
             string LoadQuery = "";
-            LoadQuery += "SELECT B.maDonXinGiaHan, B.maGiangVien, B.maDeTai,A.maCTDXGH,A.ngayGiaHan, A.ngayHoanThanh,A.linkDonXin FROM CHITIETDONXINGIAHAN A, DONXINGIAHAN B";
+            LoadQuery += "SELECT B.maDonXinGiaHan, B.maGiangVien, B.maDeTai,A.ngayGiaHan, A.ngayHoanThanh,A.linkDonXin FROM CHITIETDONXINGIAHAN A, DONXINGIAHAN B";
             LoadQuery += " WHERE B.maDeTai IN (SELECT maDeTai FROM DETAI WHERE maTrangThai=6) AND A.maCTDXGH = B.maCTDXGH"; // mã trạng thái =6: đề tài ở trạng thái chờ duyệt gia hạn
             dt = HandleDB.Instance.ExecuteQuery(LoadQuery, param);
             return dt;
@@ -49,17 +49,17 @@ namespace QuanLyDeTaiKhoaHoc.DAL
         {
             System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMain"];
             Dictionary<string, string> param = new Dictionary<string, string>();
-            string maDonXinGiaHan = ((frmMain)f).tb_maCTDXGH.Text;
+            string maDonXinGiaHan = ((frmMain)f).tb_maDXGH.Text;
             string maGiangVien = ((frmMain)f).tb_maGV4.Text;
-            string maCTDXGH = ((frmMain)f).tb_maCTDXGH.Text;
+          
             string maDeTai = ((frmMain)f).tb_maDeTai3.Text;
             string ngayGiaHan = ((frmMain)f).dt_NgayGH.Value.ToString("MM/dd/yyyy");
             string ngayHoanThanh = ((frmMain)f).dt_NgayHoanThanh.Value.ToString("MM/dd/yyyy");
             string linkDonXin = ((frmMain)f).tb_linkDonXin.Text;
             string AddDXGH = String.Empty;
             string AddCTDXGH = String.Empty;
-            AddCTDXGH = "INSERT INTO CHITIETDONXINGIAHAN(maCTDXGH, ngayGiaHan, ngayHoanThanh, linkDonXin) VALUES ('" + maCTDXGH + "', '" + ngayGiaHan + "', '" + ngayHoanThanh + "', '" + linkDonXin + "')";
-            AddDXGH = "INSERT INTO DONXINGIAHAN(maDonXinGiaHan,maGiangVien,maCTDXGH,maDeTai) VALUES ('" + maDonXinGiaHan + "', '" + maGiangVien + "','" + maCTDXGH + "','" + maDeTai + "' )";
+            AddCTDXGH = "INSERT INTO CHITIETDONXINGIAHAN(maCTDXGH, ngayGiaHan, ngayHoanThanh, linkDonXin) VALUES ('" + maDonXinGiaHan + "', '" + ngayGiaHan + "', '" + ngayHoanThanh + "', '" + linkDonXin + "')";
+            AddDXGH = "INSERT INTO DONXINGIAHAN(maDonXinGiaHan,maGiangVien,maCTDXGH,maDeTai) VALUES ('" + maDonXinGiaHan + "', '" + maGiangVien + "','" + maDonXinGiaHan + "','" + maDeTai + "' )";
 
             int result1 = HandleDB.Instance.ExecuteNonQuery(AddCTDXGH, param);
             int result2 = HandleDB.Instance.ExecuteNonQuery(AddDXGH, param);
@@ -71,7 +71,7 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             }
             else
             {
-                MessageBox.Show("Thêm thất bại");
+                MessageBox.Show("Thêm đơn gia hạn thất bại");
             }
         }
         public void SetTrangThaiGiaHan()
@@ -107,6 +107,24 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             {
                 MessageBox.Show("Duyệt gia hạn đề tài thành công");
             }
+        }
+
+
+        public int GetNextID()
+        {
+            int nextID = 1;
+
+            string Query = String.Empty;
+            Query += "SELECT TOP 1 maDonXinGiaHan FROM DONXINGIAHAN ";
+            Query += "ORDER BY maDonXinGiaHan DESC";
+
+            DataTable dt = HandleDB.Instance.ExecuteQuery(Query, null);
+            if (dt.Rows.Count > 0)
+            {
+                Int32.TryParse(dt.Rows[0]["maDonXinGiaHan"].ToString(), out nextID);
+                ++nextID;
+            }
+            return nextID;
         }
     }
 }

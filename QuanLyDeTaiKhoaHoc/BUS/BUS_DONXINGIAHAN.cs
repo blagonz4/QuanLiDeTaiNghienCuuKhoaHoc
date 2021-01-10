@@ -50,5 +50,11 @@ namespace QuanLyDeTaiKhoaHoc.BUS
         {
             DAL_DONXINGIAHAN.Instance.UpdateNgayHoanThanh();
         }
+
+        public int GetnextID()
+        {
+            return DAL_DONXINGIAHAN.Instance.GetNextID();
+        }
+
     }
 }
