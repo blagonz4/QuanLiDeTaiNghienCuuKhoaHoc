@@ -38,9 +38,8 @@ namespace QuanLyDeTaiKhoaHoc.DAL
 
             DataTable dt = new DataTable();
             string LoadQuery = "";
-            LoadQuery += "SELECT maDonXinGiaHan,maGiangVien,maCTDXGH,maDeTai,ngayHoanThanh,ngayGiaHan FROM DONXINGIAHAN WHERE maDeTai IN";
-            LoadQuery += "(SELECT maDeTai FROM DETAI WHERE maTrangThai=6)"; // mã trạng thái =6: đề tài ở trạng thái chờ duyệt gia hạn
-            // cần bổ sung link đề tài
+            LoadQuery += "SELECT B.maDonXinGiaHan, B.maGiangVien, B.maDeTai,A.maCTDXGH,A.ngayGiaHan, A.ngayHoanThanh,A.linkDonXin FROM CHITIETDONXINGIAHAN A, DONXINGIAHAN B";
+            LoadQuery += " WHERE B.maDeTai IN (SELECT maDeTai FROM DETAI WHERE maTrangThai=6) AND A.maCTDXGH = B.maCTDXGH"; // mã trạng thái =6: đề tài ở trạng thái chờ duyệt gia hạn
             dt = HandleDB.Instance.ExecuteQuery(LoadQuery, param);
             return dt;
         }
@@ -49,22 +48,30 @@ namespace QuanLyDeTaiKhoaHoc.DAL
         public void GiaHanDeTai()
         {
             System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMain"];
-            string AddQuery = "";
-            AddQuery += "INSERT INTO DONXINGIAHAN(maDonXinGiaHan,maGiangVien,maDeTai,ngayHoanThanh,ngayGiaHan)"; // thiếu link, thiếu mã CTDXGH
-            AddQuery += "VALUES(@maDonXinGiaHan,@maGiangVien,@maDeTai,@ngayHoanThanh,@ngayGiaHan)";
-
             Dictionary<string, string> param = new Dictionary<string, string>();
+            string maDonXinGiaHan = ((frmMain)f).tb_maCTDXGH.Text;
+            string maGiangVien = ((frmMain)f).tb_maGV4.Text;
+            string maCTDXGH = ((frmMain)f).tb_maCTDXGH.Text;
+            string maDeTai = ((frmMain)f).tb_maDeTai3.Text;
+            string ngayGiaHan = ((frmMain)f).dt_NgayGH.Value.ToString("MM/dd/yyyy");
+            string ngayHoanThanh = ((frmMain)f).dt_NgayHoanThanh.Value.ToString("MM/dd/yyyy");
+            string linkDonXin = ((frmMain)f).tb_linkDonXin.Text;
+            string AddDXGH = String.Empty;
+            string AddCTDXGH = String.Empty;
+            AddCTDXGH = "INSERT INTO CHITIETDONXINGIAHAN(maCTDXGH, ngayGiaHan, ngayHoanThanh, linkDonXin) VALUES ('" + maCTDXGH + "', '" + ngayGiaHan + "', '" + ngayHoanThanh + "', '" + linkDonXin + "')";
+            AddDXGH = "INSERT INTO DONXINGIAHAN(maDonXinGiaHan,maGiangVien,maCTDXGH,maDeTai) VALUES ('" + maDonXinGiaHan + "', '" + maGiangVien + "','" + maCTDXGH + "','" + maDeTai + "' )";
 
-            param.Add("@maDonXinGiaHan", ((frmMain)f).tb_maDXGH.Text);
-            param.Add("@maGiangVien", ((frmMain)f).tb_maGV4.Text);
-            //param.Add("@maCTDXGH", ((frmMain)f).dt_NgayTH.Value.ToString());
-            param.Add("@maDeTai", ((frmMain)f).tb_maDeTai3.Text);
-            param.Add("@ngayHoanThanh", ((frmMain)f).dt_NgayHoanThanh.Value.ToString());
-            param.Add("@ngayGiaHan", ((frmMain)f).dt_NgayGH.Value.ToString());
-            int result = HandleDB.Instance.ExecuteNonQuery(AddQuery, param);
-            if (result > 0)
+            int result1 = HandleDB.Instance.ExecuteNonQuery(AddCTDXGH, param);
+            int result2 = HandleDB.Instance.ExecuteNonQuery(AddDXGH, param);
+
+
+            if (result1 > 0 && result2 > 0)
             {
-                MessageBox.Show("Đăng kí gia hạn đề tài thành công");
+                MessageBox.Show("Thêm đơn gia hạn thành công");
+            }
+            else
+            {
+                MessageBox.Show("Thêm thất bại");
             }
         }
         public void SetTrangThaiGiaHan()
@@ -76,6 +83,18 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             param.Add("@maDeTai", ((frmMain)f).tb_maDeTai3.Text);
             int result = HandleDB.Instance.ExecuteNonQuery(DuyetDeTai, param);
         }
+
+        public void UpdateNgayHoanThanh()
+        {
+            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMain"];
+            string Update = "";
+            Update += "UPDATE DETAI SET ngayHoanThanhDeTai=@ngayHoanThanhDeTai WHERE maDeTai=@maDeTai";
+            Dictionary<string, string> param = new Dictionary<string, string>();
+            param.Add("@maDeTai", ((frmMain)f).tb_maDeTai3.Text);
+            param.Add("@ngayHoanThanhDeTai", ((frmMain)f).dt_NgayHoanThanh.Value.ToString());
+            int result = HandleDB.Instance.ExecuteNonQuery(Update, param);
+        }
+
         public void DuyetGiaHan()
         {
             System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMain"];

@@ -33,7 +33,7 @@ namespace QuanLyDeTaiKhoaHoc.DAL
 
             DataTable dt = new DataTable();
             string LoadQuery = "";
-            LoadQuery += "SELECT * FROM DETAI";
+            LoadQuery += "SELECT * FROM DETAI WHERE maDeTai NOT IN (SELECT maDeTai FROM DETAI WHERE maTrangThai ='1')";
             dt = HandleDB.Instance.ExecuteQuery(LoadQuery, param);
             return dt;
         }
@@ -55,8 +55,7 @@ namespace QuanLyDeTaiKhoaHoc.DAL
 
             DataTable dt = new DataTable();
             string LoadQuery = "";
-            LoadQuery += "SELECT maDeTai,tenDeTai,linhVuc,capDo,maGiangVien,ngayThucHien FROM DETAI WHERE maTrangThai='1' "; // mã trạng thái =1: vừa đk chưa được duyệt
-            // cần bổ sung link đề tài
+            LoadQuery += "SELECT maDeTai,tenDeTai,linhVuc,capDo,maGiangVien,ngayThucHien,linkDeTai FROM DETAI WHERE maTrangThai='1' "; // mã trạng thái =1: vừa đk chưa được duyệt
             dt = HandleDB.Instance.ExecuteQuery(LoadQuery, param);
             return dt;
         }
@@ -64,17 +63,18 @@ namespace QuanLyDeTaiKhoaHoc.DAL
         {
             System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMain"];
             string AddQuery = "";
-            AddQuery += "INSERT INTO DETAI(maDeTai,tenDeTai,ngayTH,,linhVuc,capDo,ketQua,maTrangThai,maGiangVien)";
-            AddQuery += "VALUES(@maDeTai,@tenDeTai,@ngayTH,@linhVuc,@capDo,@ketQua,'1',@maGiangVien)";
+            AddQuery += "INSERT INTO DETAI(maDeTai,tenDeTai,ngayThucHien,linhVuc,capDo,maTrangThai,maGiangVien,linkDeTai)";
+            AddQuery += "VALUES(@maDeTai,@tenDeTai,@ngayThucHien,@linhVuc,@capDo,'1',@maGiangVien,@linkDeTai)";
 
             Dictionary<string, string> param = new Dictionary<string, string>();
 
-            param.Add("@maDeTai", ((frmMain)f).tb_MaDT1.Text);
-            param.Add("@tenGiangVien", ((frmMain)f).tb_TenDT1.Text);
-            param.Add("@ngayTH", ((frmMain)f).dt_NgTH1.Value.ToString());
-            param.Add("@linhVuc", ((frmMain)f).tb_LinhVuc1.Text);
-            param.Add("@capDo", ((frmMain)f).cb_CapDo1.Text);
-            param.Add("@maGiangVien", ((frmMain)f).tb_MaGV1.Text);
+            param.Add("@maDeTai", ((frmMain)f).tb_MaDT.Text);
+            param.Add("@tenDeTai", ((frmMain)f).tb_TenDT.Text);
+            param.Add("@ngayThucHien", ((frmMain)f).dt_NgTH1.Value.ToString());
+            param.Add("@linhVuc", ((frmMain)f).tb_LinhVuc.Text);
+            param.Add("@capDo", ((frmMain)f).cb_CapDo.Text);
+            param.Add("@maGiangVien", ((frmMain)f).tb_MaGV2.Text);
+            param.Add("@linkDeTai", ((frmMain)f).tb_LinkDeTai1.Text);
             int result = HandleDB.Instance.ExecuteNonQuery(AddQuery, param);
             if (result > 0)
             {
@@ -128,12 +128,28 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             string DuyetDeTai = "";
             DuyetDeTai += "UPDATE DETAI SET maTrangThai='2' WHERE maDeTai=@maDeTai";
             Dictionary<string, string> param = new Dictionary<string, string>();
-            param.Add("@maDeTai", ((frmMain)f).tb_MaDT1.Text);
+            param.Add("@maDeTai", ((frmMain)f).tb_MaDT2.Text);
             int result = HandleDB.Instance.ExecuteNonQuery(DuyetDeTai, param);
             if (result > 0)
             {
                 MessageBox.Show("Duyệt đề tài thành công");
             }
-        } // còn thiếu duyệt theo cấp độ
+        }
+        public int GetNextID()
+        {
+            int nextID = 1;
+
+            string Query = String.Empty;
+            Query += "SELECT TOP 1 maDeTai FROM DETAI ";
+            Query += "ORDER BY maDeTai DESC";
+
+            DataTable dt = HandleDB.Instance.ExecuteQuery(Query, null);
+            if (dt.Rows.Count > 0)
+            {
+                Int32.TryParse(dt.Rows[0]["maDeTai"].ToString(), out nextID);
+                ++nextID;
+            }
+            return nextID;
+        }
     }
 }

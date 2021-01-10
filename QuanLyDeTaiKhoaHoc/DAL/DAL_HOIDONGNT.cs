@@ -127,13 +127,13 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             int nextID = 1;
 
             string Query = String.Empty;
-            Query += "SELECT TOP 1 MaHoiDong FROM HOIDONGNGHIEMTHU ";
-            Query += "ORDER BY MaHoiDong DESC";
+            Query += "SELECT TOP 1 maHoiDong FROM HOIDONGNGHIEMTHU ";
+            Query += "ORDER BY maHoiDong DESC";
 
             DataTable dt = HandleDB.Instance.ExecuteQuery(Query, null);
             if (dt.Rows.Count > 0)
             {
-                Int32.TryParse(dt.Rows[0]["MaHoiDong"].ToString(), out nextID);
+                Int32.TryParse(dt.Rows[0]["maHoiDong"].ToString(), out nextID);
                 ++nextID;
             }
             return nextID;

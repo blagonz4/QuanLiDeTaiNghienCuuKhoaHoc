@@ -42,5 +42,11 @@ namespace QuanLyDeTaiKhoaHoc.BUS
         {
             DAL_GIANGVIEN.Instance.SuaGV();
         }
+
+
+        public int GetnextID()
+        {
+            return DAL_GIANGVIEN.Instance.GetNextID();
+        }
     }
 }
