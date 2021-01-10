@@ -46,7 +46,7 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMain"];
             string AddQuery = "";
             AddQuery += "INSERT INTO GIANGVIEN(maGiangVien,tenGiangVien,Nganh,maHopDong,maAccount,maKhoa,trinhDo,ngaySinh)";
-            AddQuery += "VALUES(@maGiangVien,@tenGiangVien,@Nganh,@maHopDong,'1',@maKhoa,'dai hoc',@ngaySinh)";
+            AddQuery += "VALUES(@maGiangVien,@tenGiangVien,@Nganh,@maHopDong,'1',@maKhoa,@trinhDo,@ngaySinh)";
 
             Dictionary<string, string> param = new Dictionary<string, string>();
 
@@ -56,6 +56,7 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             param.Add("@maHopDong", ((frmMain)f).tb_HopDong.Text);
             param.Add("@maKhoa", ((frmMain)f).cb_Khoa.SelectedValue.ToString());
             param.Add("@ngaySinh", ((frmMain)f).dt_NgSinh.Value.ToString());
+            param.Add("@trinhDo", ((frmMain)f).tb_trinhDo.Text);
             int result = HandleDB.Instance.ExecuteNonQuery(AddQuery, param);
             if (result > 0)
             {
@@ -102,7 +103,29 @@ namespace QuanLyDeTaiKhoaHoc.DAL
                 MessageBox.Show("Sửa giảng viên thành công");
             }
         }
+        public int GetNextID()
+        {
+            int nextID = 1;
+
+            string Query = String.Empty;
+            Query += "SELECT TOP 1 maGiangVien FROM GIANGVIEN ";
+            Query += "ORDER BY maGiangVIen DESC";
+
+            DataTable dt = HandleDB.Instance.ExecuteQuery(Query, null);
+            if (dt.Rows.Count > 0)
+            {
+                Int32.TryParse(dt.Rows[0]["maGiangVien"].ToString(), out nextID);
+                ++nextID;
+            }
+            return nextID;
+        }
 
     }
+
+
+
+
+
+
 
 }

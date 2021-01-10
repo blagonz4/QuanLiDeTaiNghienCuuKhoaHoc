@@ -46,5 +46,9 @@ namespace QuanLyDeTaiKhoaHoc.BUS
         {
             DAL_DONXINGIAHAN.Instance.SetTrangThaiGiaHan();
         }
+        public void UpdateNgayHoanThanh()
+        {
+            DAL_DONXINGIAHAN.Instance.UpdateNgayHoanThanh();
+        }
     }
 }
