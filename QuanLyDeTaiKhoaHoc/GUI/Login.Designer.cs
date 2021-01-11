@@ -53,10 +53,10 @@
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = global::QuanLyDeTaiKhoaHoc.Properties.Resources.logo_uit;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(257, 82);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(273, 82);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(565, 335);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(331, 335);
             this.guna2PictureBox1.TabIndex = 1;
             this.guna2PictureBox1.TabStop = false;
             // 
@@ -137,13 +137,14 @@
             this.btn_Login.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Login.ForeColor = System.Drawing.Color.White;
             this.btn_Login.HoverState.Parent = this.btn_Login;
-            this.btn_Login.Location = new System.Drawing.Point(282, 686);
+            this.btn_Login.Location = new System.Drawing.Point(283, 657);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.ShadowDecoration.Parent = this.btn_Login;
             this.btn_Login.Size = new System.Drawing.Size(233, 109);
             this.btn_Login.TabIndex = 6;
             this.btn_Login.Text = "Đăng nhập";
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
+            this.btn_Login.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btn_Login_KeyPress);
             // 
             // Login
             // 
@@ -160,6 +161,7 @@
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Name = "Login";
             this.Text = "Login";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Login_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 

@@ -34,7 +34,7 @@ namespace QuanLyDeTaiKhoaHoc.GUI
             string matkhau = ((Login)f).tb_Matkhau.Text;
 
             string query = "";
-            query += "SELECT * ";
+            query += "SELECT [Email], [Pass], [maTypeAccount] ";
             query += "FROM [QUANLYDETAI].[dbo].[ACCOUNT] ";
             query += "WHERE [Email] = @tk ";
             query += "AND [Pass] = @mk";
@@ -59,6 +59,16 @@ namespace QuanLyDeTaiKhoaHoc.GUI
         }
 
         private void btn_Login_Click(object sender, EventArgs e)
+        {
+            LoginCheck();
+        }
+
+        private void Login_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            LoginCheck();
+        }
+
+        private void btn_Login_KeyPress(object sender, KeyPressEventArgs e)
         {
             LoginCheck();
         }

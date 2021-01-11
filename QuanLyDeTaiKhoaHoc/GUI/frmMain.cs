@@ -22,21 +22,51 @@ namespace QuanLyDeTaiKhoaHoc.GUI
 {
     public partial class frmMain : Form
     {
-        string taikhoan = "", matkhau = "", typeAccount = "";
+        string taikhoan = "", matkhau = "", maTypeAccount = "";
         private Dictionary<string, string[]> listBBNT = new Dictionary<string, string[]>(); // lấy danh sách nghiệm thu
 
 
-        public frmMain(string taikhoan, string matkhau, string typeAccount)
+        public frmMain(string taikhoan, string matkhau, string maTypeAccount)
         {
             InitializeComponent();
             this.taikhoan = taikhoan;
             this.matkhau = matkhau;
-            this.typeAccount = typeAccount;
+            this.maTypeAccount = maTypeAccount;
+        }
+
+        public void Phanquyen() // Phân quyền đăng nhập
+        {
+            if (this.maTypeAccount.CompareTo("2") == 0) // giảng viên 
+            {
+                tab_main.Controls.Remove(tab_DangKiDT);
+                tab_main.Controls.Remove(tab_GHDT);
+         
+
+            }
+            else if (this.maTypeAccount.CompareTo("1") == 0)// nhân viên phòng khoa học
+            {
+                tab_main.Controls.Remove(tab_GiangVien);
+                tab_main.Controls.Remove(tab_HoiDong);
+                tab_main.Controls.Remove(tab_DDT);
+                tab_main.Controls.Remove(tab_BCTH);
+                tab_main.Controls.Remove(tab_NghiemThu);
+                tab_main.Controls.Remove(tab_QLDT);
+
+            }
+            else if (this.maTypeAccount.CompareTo("3") == 0)// nhân viên bảo trì
+            {
+              
+            }
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
 
+
+            Phanquyen();
+
+
+            // hiển thị dữ liệu lên datagrid view
             dgv_GiangVien.DataSource = BUS_GIANGVIEN.Instance.GetListGV();
             dgv_DeTai.DataSource = BUS_DETAI.Instance.GetListDeTai();
             cb_Khoa.DataSource = BUS_KHOA.Instance.GetListKhoa();

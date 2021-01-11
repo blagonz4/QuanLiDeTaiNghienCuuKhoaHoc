@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -54,8 +53,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.tab_GHDT = new System.Windows.Forms.TabControl();
-            this.tab_DKDT = new System.Windows.Forms.TabPage();
+            this.tab_main = new System.Windows.Forms.TabControl();
+            this.tab_GiangVien = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
             this.tb_trinhDo = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -93,7 +92,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.btn_DuyetDeTai = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dgv_DuyetDeTai = new Guna.UI2.WinForms.Guna2DataGridView();
             this.maDeTai3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -108,6 +106,7 @@
             this.tb_LinhVuc2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.tb_TenDT2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.tb_MaDT2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_DuyetDeTai = new Guna.UI2.WinForms.Guna2GradientButton();
             this.tab_QLDT = new System.Windows.Forms.TabPage();
             this.guna2GradientButton8 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.tb_LinkDeTai2 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -121,8 +120,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.btn_SuaDT = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btn_XoaDT = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dgv_DeTai = new Guna.UI2.WinForms.Guna2DataGridView();
             this.maDeTai = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -138,18 +135,18 @@
             this.tb_LinhVuc1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.tb_TenDT1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.tb_MaDT1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tab_QLGV = new System.Windows.Forms.TabPage();
+            this.btn_SuaDT = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btn_XoaDT = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.tab_NghiemThu = new System.Windows.Forms.TabPage();
             this.label51 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.tb_LinkBienBan = new Guna.UI2.WinForms.Guna2TextBox();
             this.tb_MaDT5 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btn_ThemBB = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.btn_InBB = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GroupBox7 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dgv_BBNT = new Guna.UI2.WinForms.Guna2DataGridView();
             this.maBienBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -160,7 +157,9 @@
             this.tb_TongDiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.tb_MaHD1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.tb_MaBB = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tab_NTDT = new System.Windows.Forms.TabPage();
+            this.btn_ThemBB = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btn_InBB = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.tab_DangKiDT = new System.Windows.Forms.TabPage();
             this.guna2GradientButton10 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.tb_LinkDeTai1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label27 = new System.Windows.Forms.Label();
@@ -170,7 +169,6 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.tb_ThemDT = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.maDeTai1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -186,15 +184,20 @@
             this.tb_LinhVuc = new Guna.UI2.WinForms.Guna2TextBox();
             this.tb_TenDT = new Guna.UI2.WinForms.Guna2TextBox();
             this.tb_MaDT = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tb_ThemDT = new Guna.UI2.WinForms.Guna2GradientButton();
             this.tab_BCTH = new System.Windows.Forms.TabPage();
+            this.label53 = new System.Windows.Forms.Label();
+            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GroupBox8 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2DataGridView7 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2GradientButton7 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label47 = new System.Windows.Forms.Label();
             this.guna2ComboBox3 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label34 = new System.Windows.Forms.Label();
             this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.guna2GradientButton7 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.tab_GHDT = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
             this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.tb_linkDonXin = new Guna.UI2.WinForms.Guna2TextBox();
@@ -204,8 +207,6 @@
             this.label37 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
-            this.btn_DuyetGiaHan = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btn_GiaHan = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GroupBox5 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dgv_GiaHan = new Guna.UI2.WinForms.Guna2DataGridView();
             this.maDonXinGiaHan = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -216,6 +217,8 @@
             this.dt_NgayGH = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.tb_maGV4 = new Guna.UI2.WinForms.Guna2TextBox();
             this.tb_maDXGH = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_DuyetGiaHan = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btn_GiaHan = new Guna.UI2.WinForms.Guna2GradientButton();
             this.tab_HoiDong = new System.Windows.Forms.TabPage();
             this.label46 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
@@ -224,9 +227,6 @@
             this.label42 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
-            this.btn_SuaHD = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btn_XoaHD = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btn_ThemHD = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GroupBox6 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dgv_HD = new Guna.UI2.WinForms.Guna2DataGridView();
             this.maHoiDong = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -243,14 +243,13 @@
             this.tb_PB1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.tb_ChuTichHD = new Guna.UI2.WinForms.Guna2TextBox();
             this.tb_MaHD = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_SuaHD = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btn_XoaHD = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btn_ThemHD = new Guna.UI2.WinForms.Guna2GradientButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label52 = new System.Windows.Forms.Label();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label53 = new System.Windows.Forms.Label();
-            this.tab_GHDT.SuspendLayout();
-            this.tab_DKDT.SuspendLayout();
+            this.tab_main.SuspendLayout();
+            this.tab_GiangVien.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_GiangVien)).BeginInit();
             this.tab_DDT.SuspendLayout();
@@ -259,16 +258,16 @@
             this.tab_QLDT.SuspendLayout();
             this.guna2GroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DeTai)).BeginInit();
-            this.tab_QLGV.SuspendLayout();
+            this.tab_NghiemThu.SuspendLayout();
             this.guna2GroupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_BBNT)).BeginInit();
-            this.tab_NTDT.SuspendLayout();
+            this.tab_DangKiDT.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.tab_BCTH.SuspendLayout();
             this.guna2GroupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView7)).BeginInit();
-            this.tabPage1.SuspendLayout();
+            this.tab_GHDT.SuspendLayout();
             this.guna2GroupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_GiaHan)).BeginInit();
             this.tab_HoiDong.SuspendLayout();
@@ -276,52 +275,52 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HD)).BeginInit();
             this.SuspendLayout();
             // 
-            // tab_GHDT
+            // tab_main
             // 
-            this.tab_GHDT.Controls.Add(this.tab_DKDT);
-            this.tab_GHDT.Controls.Add(this.tab_DDT);
-            this.tab_GHDT.Controls.Add(this.tab_QLDT);
-            this.tab_GHDT.Controls.Add(this.tab_QLGV);
-            this.tab_GHDT.Controls.Add(this.tab_NTDT);
-            this.tab_GHDT.Controls.Add(this.tab_BCTH);
-            this.tab_GHDT.Controls.Add(this.tabPage1);
-            this.tab_GHDT.Controls.Add(this.tab_HoiDong);
-            this.tab_GHDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tab_GHDT.Location = new System.Drawing.Point(0, 1);
-            this.tab_GHDT.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tab_GHDT.Name = "tab_GHDT";
-            this.tab_GHDT.SelectedIndex = 0;
-            this.tab_GHDT.Size = new System.Drawing.Size(1239, 709);
-            this.tab_GHDT.TabIndex = 0;
+            this.tab_main.Controls.Add(this.tab_GiangVien);
+            this.tab_main.Controls.Add(this.tab_DDT);
+            this.tab_main.Controls.Add(this.tab_QLDT);
+            this.tab_main.Controls.Add(this.tab_NghiemThu);
+            this.tab_main.Controls.Add(this.tab_DangKiDT);
+            this.tab_main.Controls.Add(this.tab_BCTH);
+            this.tab_main.Controls.Add(this.tab_GHDT);
+            this.tab_main.Controls.Add(this.tab_HoiDong);
+            this.tab_main.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tab_main.Location = new System.Drawing.Point(0, 1);
+            this.tab_main.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.tab_main.Name = "tab_main";
+            this.tab_main.SelectedIndex = 0;
+            this.tab_main.Size = new System.Drawing.Size(1239, 709);
+            this.tab_main.TabIndex = 0;
             // 
-            // tab_DKDT
+            // tab_GiangVien
             // 
-            this.tab_DKDT.Controls.Add(this.label8);
-            this.tab_DKDT.Controls.Add(this.tb_trinhDo);
-            this.tab_DKDT.Controls.Add(this.label6);
-            this.tab_DKDT.Controls.Add(this.label5);
-            this.tab_DKDT.Controls.Add(this.label4);
-            this.tab_DKDT.Controls.Add(this.label3);
-            this.tab_DKDT.Controls.Add(this.label2);
-            this.tab_DKDT.Controls.Add(this.label1);
-            this.tab_DKDT.Controls.Add(this.cb_Khoa);
-            this.tab_DKDT.Controls.Add(this.btn_Sua);
-            this.tab_DKDT.Controls.Add(this.btn_Xoa);
-            this.tab_DKDT.Controls.Add(this.btn_Them);
-            this.tab_DKDT.Controls.Add(this.guna2GroupBox1);
-            this.tab_DKDT.Controls.Add(this.dt_NgSinh);
-            this.tab_DKDT.Controls.Add(this.tb_HopDong);
-            this.tab_DKDT.Controls.Add(this.tb_ChuyenNganh);
-            this.tab_DKDT.Controls.Add(this.tb_TenGV);
-            this.tab_DKDT.Controls.Add(this.tb_MaGV);
-            this.tab_DKDT.Location = new System.Drawing.Point(4, 34);
-            this.tab_DKDT.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tab_DKDT.Name = "tab_DKDT";
-            this.tab_DKDT.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tab_DKDT.Size = new System.Drawing.Size(1231, 671);
-            this.tab_DKDT.TabIndex = 0;
-            this.tab_DKDT.Text = "Quản lí giảng viên";
-            this.tab_DKDT.UseVisualStyleBackColor = true;
+            this.tab_GiangVien.Controls.Add(this.label8);
+            this.tab_GiangVien.Controls.Add(this.tb_trinhDo);
+            this.tab_GiangVien.Controls.Add(this.label6);
+            this.tab_GiangVien.Controls.Add(this.label5);
+            this.tab_GiangVien.Controls.Add(this.label4);
+            this.tab_GiangVien.Controls.Add(this.label3);
+            this.tab_GiangVien.Controls.Add(this.label2);
+            this.tab_GiangVien.Controls.Add(this.label1);
+            this.tab_GiangVien.Controls.Add(this.cb_Khoa);
+            this.tab_GiangVien.Controls.Add(this.btn_Sua);
+            this.tab_GiangVien.Controls.Add(this.btn_Xoa);
+            this.tab_GiangVien.Controls.Add(this.btn_Them);
+            this.tab_GiangVien.Controls.Add(this.guna2GroupBox1);
+            this.tab_GiangVien.Controls.Add(this.dt_NgSinh);
+            this.tab_GiangVien.Controls.Add(this.tb_HopDong);
+            this.tab_GiangVien.Controls.Add(this.tb_ChuyenNganh);
+            this.tab_GiangVien.Controls.Add(this.tb_TenGV);
+            this.tab_GiangVien.Controls.Add(this.tb_MaGV);
+            this.tab_GiangVien.Location = new System.Drawing.Point(4, 34);
+            this.tab_GiangVien.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.tab_GiangVien.Name = "tab_GiangVien";
+            this.tab_GiangVien.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.tab_GiangVien.Size = new System.Drawing.Size(1231, 671);
+            this.tab_GiangVien.TabIndex = 0;
+            this.tab_GiangVien.Text = "Quản lí giảng viên";
+            this.tab_GiangVien.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -436,7 +435,7 @@
             this.btn_Sua.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sua.ForeColor = System.Drawing.Color.White;
             this.btn_Sua.HoverState.Parent = this.btn_Sua;
-            this.btn_Sua.Image = ((System.Drawing.Image)(resources.GetObject("btn_Sua.Image")));
+            this.btn_Sua.Image = global::QuanLyDeTaiKhoaHoc.Properties.Resources.pen;
             this.btn_Sua.Location = new System.Drawing.Point(1043, 605);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.ShadowDecoration.Parent = this.btn_Sua;
@@ -452,7 +451,7 @@
             this.btn_Xoa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Xoa.ForeColor = System.Drawing.Color.White;
             this.btn_Xoa.HoverState.Parent = this.btn_Xoa;
-            this.btn_Xoa.Image = ((System.Drawing.Image)(resources.GetObject("btn_Xoa.Image")));
+            this.btn_Xoa.Image = global::QuanLyDeTaiKhoaHoc.Properties.Resources.delete;
             this.btn_Xoa.Location = new System.Drawing.Point(827, 605);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.ShadowDecoration.Parent = this.btn_Xoa;
@@ -468,7 +467,7 @@
             this.btn_Them.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Them.ForeColor = System.Drawing.Color.White;
             this.btn_Them.HoverState.Parent = this.btn_Them;
-            this.btn_Them.Image = ((System.Drawing.Image)(resources.GetObject("btn_Them.Image")));
+            this.btn_Them.Image = global::QuanLyDeTaiKhoaHoc.Properties.Resources._102575421_910418189438743_55883774152658909_n;
             this.btn_Them.Location = new System.Drawing.Point(623, 605);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.ShadowDecoration.Parent = this.btn_Them;
@@ -730,7 +729,6 @@
             this.tab_DDT.Controls.Add(this.label11);
             this.tab_DDT.Controls.Add(this.label10);
             this.tab_DDT.Controls.Add(this.label7);
-            this.tab_DDT.Controls.Add(this.btn_DuyetDeTai);
             this.tab_DDT.Controls.Add(this.guna2GroupBox4);
             this.tab_DDT.Controls.Add(this.cb_CapDo2);
             this.tab_DDT.Controls.Add(this.dt_NgTH2);
@@ -738,6 +736,7 @@
             this.tab_DDT.Controls.Add(this.tb_LinhVuc2);
             this.tab_DDT.Controls.Add(this.tb_TenDT2);
             this.tab_DDT.Controls.Add(this.tb_MaDT2);
+            this.tab_DDT.Controls.Add(this.btn_DuyetDeTai);
             this.tab_DDT.Location = new System.Drawing.Point(4, 34);
             this.tab_DDT.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tab_DDT.Name = "tab_DDT";
@@ -846,22 +845,6 @@
             this.label7.Size = new System.Drawing.Size(101, 25);
             this.label7.TabIndex = 67;
             this.label7.Text = "Mã đề tài";
-            // 
-            // btn_DuyetDeTai
-            // 
-            this.btn_DuyetDeTai.CheckedState.Parent = this.btn_DuyetDeTai;
-            this.btn_DuyetDeTai.CustomImages.Parent = this.btn_DuyetDeTai;
-            this.btn_DuyetDeTai.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DuyetDeTai.ForeColor = System.Drawing.Color.White;
-            this.btn_DuyetDeTai.HoverState.Parent = this.btn_DuyetDeTai;
-            this.btn_DuyetDeTai.Image = ((System.Drawing.Image)(resources.GetObject("btn_DuyetDeTai.Image")));
-            this.btn_DuyetDeTai.Location = new System.Drawing.Point(1043, 602);
-            this.btn_DuyetDeTai.Name = "btn_DuyetDeTai";
-            this.btn_DuyetDeTai.ShadowDecoration.Parent = this.btn_DuyetDeTai;
-            this.btn_DuyetDeTai.Size = new System.Drawing.Size(180, 45);
-            this.btn_DuyetDeTai.TabIndex = 66;
-            this.btn_DuyetDeTai.Text = "Duyệt";
-            this.btn_DuyetDeTai.Click += new System.EventHandler(this.btn_DuyetDeTai_Click);
             // 
             // guna2GroupBox4
             // 
@@ -1113,6 +1096,22 @@
             this.tb_MaDT2.TabIndex = 41;
             this.tb_MaDT2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // btn_DuyetDeTai
+            // 
+            this.btn_DuyetDeTai.CheckedState.Parent = this.btn_DuyetDeTai;
+            this.btn_DuyetDeTai.CustomImages.Parent = this.btn_DuyetDeTai;
+            this.btn_DuyetDeTai.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DuyetDeTai.ForeColor = System.Drawing.Color.White;
+            this.btn_DuyetDeTai.HoverState.Parent = this.btn_DuyetDeTai;
+            this.btn_DuyetDeTai.Image = global::QuanLyDeTaiKhoaHoc.Properties.Resources.check_mark;
+            this.btn_DuyetDeTai.Location = new System.Drawing.Point(1043, 602);
+            this.btn_DuyetDeTai.Name = "btn_DuyetDeTai";
+            this.btn_DuyetDeTai.ShadowDecoration.Parent = this.btn_DuyetDeTai;
+            this.btn_DuyetDeTai.Size = new System.Drawing.Size(180, 45);
+            this.btn_DuyetDeTai.TabIndex = 66;
+            this.btn_DuyetDeTai.Text = "Duyệt";
+            this.btn_DuyetDeTai.Click += new System.EventHandler(this.btn_DuyetDeTai_Click);
+            // 
             // tab_QLDT
             // 
             this.tab_QLDT.Controls.Add(this.guna2GradientButton8);
@@ -1127,8 +1126,6 @@
             this.tab_QLDT.Controls.Add(this.label17);
             this.tab_QLDT.Controls.Add(this.label16);
             this.tab_QLDT.Controls.Add(this.label15);
-            this.tab_QLDT.Controls.Add(this.btn_SuaDT);
-            this.tab_QLDT.Controls.Add(this.btn_XoaDT);
             this.tab_QLDT.Controls.Add(this.guna2GroupBox3);
             this.tab_QLDT.Controls.Add(this.cb_CapDo1);
             this.tab_QLDT.Controls.Add(this.dt_NgTH1);
@@ -1137,6 +1134,8 @@
             this.tab_QLDT.Controls.Add(this.tb_LinhVuc1);
             this.tab_QLDT.Controls.Add(this.tb_TenDT1);
             this.tab_QLDT.Controls.Add(this.tb_MaDT1);
+            this.tab_QLDT.Controls.Add(this.btn_SuaDT);
+            this.tab_QLDT.Controls.Add(this.btn_XoaDT);
             this.tab_QLDT.Location = new System.Drawing.Point(4, 34);
             this.tab_QLDT.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tab_QLDT.Name = "tab_QLDT";
@@ -1285,38 +1284,6 @@
             this.label15.Size = new System.Drawing.Size(101, 25);
             this.label15.TabIndex = 44;
             this.label15.Text = "Mã đề tài";
-            // 
-            // btn_SuaDT
-            // 
-            this.btn_SuaDT.CheckedState.Parent = this.btn_SuaDT;
-            this.btn_SuaDT.CustomImages.Parent = this.btn_SuaDT;
-            this.btn_SuaDT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SuaDT.ForeColor = System.Drawing.Color.White;
-            this.btn_SuaDT.HoverState.Parent = this.btn_SuaDT;
-            this.btn_SuaDT.Image = ((System.Drawing.Image)(resources.GetObject("btn_SuaDT.Image")));
-            this.btn_SuaDT.Location = new System.Drawing.Point(1036, 587);
-            this.btn_SuaDT.Name = "btn_SuaDT";
-            this.btn_SuaDT.ShadowDecoration.Parent = this.btn_SuaDT;
-            this.btn_SuaDT.Size = new System.Drawing.Size(180, 45);
-            this.btn_SuaDT.TabIndex = 43;
-            this.btn_SuaDT.Text = "Sửa";
-            this.btn_SuaDT.Click += new System.EventHandler(this.btn_SuaDT_Click);
-            // 
-            // btn_XoaDT
-            // 
-            this.btn_XoaDT.CheckedState.Parent = this.btn_XoaDT;
-            this.btn_XoaDT.CustomImages.Parent = this.btn_XoaDT;
-            this.btn_XoaDT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_XoaDT.ForeColor = System.Drawing.Color.White;
-            this.btn_XoaDT.HoverState.Parent = this.btn_XoaDT;
-            this.btn_XoaDT.Image = ((System.Drawing.Image)(resources.GetObject("btn_XoaDT.Image")));
-            this.btn_XoaDT.Location = new System.Drawing.Point(830, 587);
-            this.btn_XoaDT.Name = "btn_XoaDT";
-            this.btn_XoaDT.ShadowDecoration.Parent = this.btn_XoaDT;
-            this.btn_XoaDT.Size = new System.Drawing.Size(180, 45);
-            this.btn_XoaDT.TabIndex = 42;
-            this.btn_XoaDT.Text = "Xóa";
-            this.btn_XoaDT.Click += new System.EventHandler(this.btn_XoaDT_Click);
             // 
             // guna2GroupBox3
             // 
@@ -1591,32 +1558,64 @@
             this.tb_MaDT1.TabIndex = 17;
             this.tb_MaDT1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // tab_QLGV
+            // btn_SuaDT
             // 
-            this.tab_QLGV.Controls.Add(this.label51);
-            this.tab_QLGV.Controls.Add(this.label50);
-            this.tab_QLGV.Controls.Add(this.guna2GradientButton1);
-            this.tab_QLGV.Controls.Add(this.tb_LinkBienBan);
-            this.tab_QLGV.Controls.Add(this.tb_MaDT5);
-            this.tab_QLGV.Controls.Add(this.btn_ThemBB);
-            this.tab_QLGV.Controls.Add(this.label26);
-            this.tab_QLGV.Controls.Add(this.label25);
-            this.tab_QLGV.Controls.Add(this.label24);
-            this.tab_QLGV.Controls.Add(this.label23);
-            this.tab_QLGV.Controls.Add(this.btn_InBB);
-            this.tab_QLGV.Controls.Add(this.guna2GroupBox7);
-            this.tab_QLGV.Controls.Add(this.tb_NhanXet);
-            this.tab_QLGV.Controls.Add(this.tb_TongDiem);
-            this.tab_QLGV.Controls.Add(this.tb_MaHD1);
-            this.tab_QLGV.Controls.Add(this.tb_MaBB);
-            this.tab_QLGV.Location = new System.Drawing.Point(4, 34);
-            this.tab_QLGV.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tab_QLGV.Name = "tab_QLGV";
-            this.tab_QLGV.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tab_QLGV.Size = new System.Drawing.Size(1231, 671);
-            this.tab_QLGV.TabIndex = 3;
-            this.tab_QLGV.Text = "Nghiệm thu đề tài";
-            this.tab_QLGV.UseVisualStyleBackColor = true;
+            this.btn_SuaDT.CheckedState.Parent = this.btn_SuaDT;
+            this.btn_SuaDT.CustomImages.Parent = this.btn_SuaDT;
+            this.btn_SuaDT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SuaDT.ForeColor = System.Drawing.Color.White;
+            this.btn_SuaDT.HoverState.Parent = this.btn_SuaDT;
+            this.btn_SuaDT.Image = global::QuanLyDeTaiKhoaHoc.Properties.Resources.pen;
+            this.btn_SuaDT.Location = new System.Drawing.Point(1036, 587);
+            this.btn_SuaDT.Name = "btn_SuaDT";
+            this.btn_SuaDT.ShadowDecoration.Parent = this.btn_SuaDT;
+            this.btn_SuaDT.Size = new System.Drawing.Size(180, 45);
+            this.btn_SuaDT.TabIndex = 43;
+            this.btn_SuaDT.Text = "Sửa";
+            this.btn_SuaDT.Click += new System.EventHandler(this.btn_SuaDT_Click);
+            // 
+            // btn_XoaDT
+            // 
+            this.btn_XoaDT.CheckedState.Parent = this.btn_XoaDT;
+            this.btn_XoaDT.CustomImages.Parent = this.btn_XoaDT;
+            this.btn_XoaDT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_XoaDT.ForeColor = System.Drawing.Color.White;
+            this.btn_XoaDT.HoverState.Parent = this.btn_XoaDT;
+            this.btn_XoaDT.Image = global::QuanLyDeTaiKhoaHoc.Properties.Resources.delete;
+            this.btn_XoaDT.Location = new System.Drawing.Point(830, 587);
+            this.btn_XoaDT.Name = "btn_XoaDT";
+            this.btn_XoaDT.ShadowDecoration.Parent = this.btn_XoaDT;
+            this.btn_XoaDT.Size = new System.Drawing.Size(180, 45);
+            this.btn_XoaDT.TabIndex = 42;
+            this.btn_XoaDT.Text = "Xóa";
+            this.btn_XoaDT.Click += new System.EventHandler(this.btn_XoaDT_Click);
+            // 
+            // tab_NghiemThu
+            // 
+            this.tab_NghiemThu.Controls.Add(this.label51);
+            this.tab_NghiemThu.Controls.Add(this.label50);
+            this.tab_NghiemThu.Controls.Add(this.guna2GradientButton1);
+            this.tab_NghiemThu.Controls.Add(this.tb_LinkBienBan);
+            this.tab_NghiemThu.Controls.Add(this.tb_MaDT5);
+            this.tab_NghiemThu.Controls.Add(this.label26);
+            this.tab_NghiemThu.Controls.Add(this.label25);
+            this.tab_NghiemThu.Controls.Add(this.label24);
+            this.tab_NghiemThu.Controls.Add(this.label23);
+            this.tab_NghiemThu.Controls.Add(this.guna2GroupBox7);
+            this.tab_NghiemThu.Controls.Add(this.tb_NhanXet);
+            this.tab_NghiemThu.Controls.Add(this.tb_TongDiem);
+            this.tab_NghiemThu.Controls.Add(this.tb_MaHD1);
+            this.tab_NghiemThu.Controls.Add(this.tb_MaBB);
+            this.tab_NghiemThu.Controls.Add(this.btn_ThemBB);
+            this.tab_NghiemThu.Controls.Add(this.btn_InBB);
+            this.tab_NghiemThu.Location = new System.Drawing.Point(4, 34);
+            this.tab_NghiemThu.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.tab_NghiemThu.Name = "tab_NghiemThu";
+            this.tab_NghiemThu.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.tab_NghiemThu.Size = new System.Drawing.Size(1231, 671);
+            this.tab_NghiemThu.TabIndex = 3;
+            this.tab_NghiemThu.Text = "Nghiệm thu đề tài";
+            this.tab_NghiemThu.UseVisualStyleBackColor = true;
             // 
             // label51
             // 
@@ -1696,22 +1695,6 @@
             this.tb_MaDT5.Size = new System.Drawing.Size(200, 36);
             this.tb_MaDT5.TabIndex = 29;
             // 
-            // btn_ThemBB
-            // 
-            this.btn_ThemBB.CheckedState.Parent = this.btn_ThemBB;
-            this.btn_ThemBB.CustomImages.Parent = this.btn_ThemBB;
-            this.btn_ThemBB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ThemBB.ForeColor = System.Drawing.Color.White;
-            this.btn_ThemBB.HoverState.Parent = this.btn_ThemBB;
-            this.btn_ThemBB.Image = ((System.Drawing.Image)(resources.GetObject("btn_ThemBB.Image")));
-            this.btn_ThemBB.Location = new System.Drawing.Point(839, 589);
-            this.btn_ThemBB.Name = "btn_ThemBB";
-            this.btn_ThemBB.ShadowDecoration.Parent = this.btn_ThemBB;
-            this.btn_ThemBB.Size = new System.Drawing.Size(180, 45);
-            this.btn_ThemBB.TabIndex = 28;
-            this.btn_ThemBB.Text = "Thêm";
-            this.btn_ThemBB.Click += new System.EventHandler(this.btn_ThemBB_Click);
-            // 
             // label26
             // 
             this.label26.AutoSize = true;
@@ -1747,22 +1730,6 @@
             this.label23.Size = new System.Drawing.Size(131, 25);
             this.label23.TabIndex = 24;
             this.label23.Text = "Mã biên bản";
-            // 
-            // btn_InBB
-            // 
-            this.btn_InBB.CheckedState.Parent = this.btn_InBB;
-            this.btn_InBB.CustomImages.Parent = this.btn_InBB;
-            this.btn_InBB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_InBB.ForeColor = System.Drawing.Color.White;
-            this.btn_InBB.HoverState.Parent = this.btn_InBB;
-            this.btn_InBB.Image = ((System.Drawing.Image)(resources.GetObject("btn_InBB.Image")));
-            this.btn_InBB.Location = new System.Drawing.Point(1040, 589);
-            this.btn_InBB.Name = "btn_InBB";
-            this.btn_InBB.ShadowDecoration.Parent = this.btn_InBB;
-            this.btn_InBB.Size = new System.Drawing.Size(180, 45);
-            this.btn_InBB.TabIndex = 21;
-            this.btn_InBB.Text = "In";
-            this.btn_InBB.Click += new System.EventHandler(this.btn_InBB_Click);
             // 
             // guna2GroupBox7
             // 
@@ -1962,33 +1929,65 @@
             this.tb_MaBB.TabIndex = 12;
             this.tb_MaBB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // tab_NTDT
+            // btn_ThemBB
             // 
-            this.tab_NTDT.Controls.Add(this.guna2GradientButton10);
-            this.tab_NTDT.Controls.Add(this.tb_LinkDeTai1);
-            this.tab_NTDT.Controls.Add(this.label27);
-            this.tab_NTDT.Controls.Add(this.label32);
-            this.tab_NTDT.Controls.Add(this.label33);
-            this.tab_NTDT.Controls.Add(this.label28);
-            this.tab_NTDT.Controls.Add(this.label29);
-            this.tab_NTDT.Controls.Add(this.label30);
-            this.tab_NTDT.Controls.Add(this.label31);
-            this.tab_NTDT.Controls.Add(this.tb_ThemDT);
-            this.tab_NTDT.Controls.Add(this.guna2GroupBox2);
-            this.tab_NTDT.Controls.Add(this.cb_CapDo);
-            this.tab_NTDT.Controls.Add(this.dt_NgayTH);
-            this.tab_NTDT.Controls.Add(this.tb_MaGV2);
-            this.tab_NTDT.Controls.Add(this.tb_LinhVuc);
-            this.tab_NTDT.Controls.Add(this.tb_TenDT);
-            this.tab_NTDT.Controls.Add(this.tb_MaDT);
-            this.tab_NTDT.Location = new System.Drawing.Point(4, 34);
-            this.tab_NTDT.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tab_NTDT.Name = "tab_NTDT";
-            this.tab_NTDT.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tab_NTDT.Size = new System.Drawing.Size(1231, 671);
-            this.tab_NTDT.TabIndex = 4;
-            this.tab_NTDT.Text = "Đăng kí đề tài";
-            this.tab_NTDT.UseVisualStyleBackColor = true;
+            this.btn_ThemBB.CheckedState.Parent = this.btn_ThemBB;
+            this.btn_ThemBB.CustomImages.Parent = this.btn_ThemBB;
+            this.btn_ThemBB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThemBB.ForeColor = System.Drawing.Color.White;
+            this.btn_ThemBB.HoverState.Parent = this.btn_ThemBB;
+            this.btn_ThemBB.Image = global::QuanLyDeTaiKhoaHoc.Properties.Resources._102575421_910418189438743_55883774152658909_n;
+            this.btn_ThemBB.Location = new System.Drawing.Point(839, 589);
+            this.btn_ThemBB.Name = "btn_ThemBB";
+            this.btn_ThemBB.ShadowDecoration.Parent = this.btn_ThemBB;
+            this.btn_ThemBB.Size = new System.Drawing.Size(180, 45);
+            this.btn_ThemBB.TabIndex = 28;
+            this.btn_ThemBB.Text = "Thêm";
+            this.btn_ThemBB.Click += new System.EventHandler(this.btn_ThemBB_Click);
+            // 
+            // btn_InBB
+            // 
+            this.btn_InBB.CheckedState.Parent = this.btn_InBB;
+            this.btn_InBB.CustomImages.Parent = this.btn_InBB;
+            this.btn_InBB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_InBB.ForeColor = System.Drawing.Color.White;
+            this.btn_InBB.HoverState.Parent = this.btn_InBB;
+            this.btn_InBB.Image = global::QuanLyDeTaiKhoaHoc.Properties.Resources.printer;
+            this.btn_InBB.Location = new System.Drawing.Point(1040, 589);
+            this.btn_InBB.Name = "btn_InBB";
+            this.btn_InBB.ShadowDecoration.Parent = this.btn_InBB;
+            this.btn_InBB.Size = new System.Drawing.Size(180, 45);
+            this.btn_InBB.TabIndex = 21;
+            this.btn_InBB.Text = "In";
+            this.btn_InBB.Click += new System.EventHandler(this.btn_InBB_Click);
+            // 
+            // tab_DangKiDT
+            // 
+            this.tab_DangKiDT.Controls.Add(this.guna2GradientButton10);
+            this.tab_DangKiDT.Controls.Add(this.tb_LinkDeTai1);
+            this.tab_DangKiDT.Controls.Add(this.label27);
+            this.tab_DangKiDT.Controls.Add(this.label32);
+            this.tab_DangKiDT.Controls.Add(this.label33);
+            this.tab_DangKiDT.Controls.Add(this.label28);
+            this.tab_DangKiDT.Controls.Add(this.label29);
+            this.tab_DangKiDT.Controls.Add(this.label30);
+            this.tab_DangKiDT.Controls.Add(this.label31);
+            this.tab_DangKiDT.Controls.Add(this.guna2GroupBox2);
+            this.tab_DangKiDT.Controls.Add(this.cb_CapDo);
+            this.tab_DangKiDT.Controls.Add(this.dt_NgayTH);
+            this.tab_DangKiDT.Controls.Add(this.tb_MaGV2);
+            this.tab_DangKiDT.Controls.Add(this.tb_LinhVuc);
+            this.tab_DangKiDT.Controls.Add(this.tb_TenDT);
+            this.tab_DangKiDT.Controls.Add(this.tb_MaDT);
+            this.tab_DangKiDT.Controls.Add(this.tb_ThemDT);
+            this.tab_DangKiDT.Location = new System.Drawing.Point(4, 34);
+            this.tab_DangKiDT.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.tab_DangKiDT.Name = "tab_DangKiDT";
+            this.tab_DangKiDT.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.tab_DangKiDT.Size = new System.Drawing.Size(1231, 671);
+            this.tab_DangKiDT.TabIndex = 4;
+            this.tab_DangKiDT.Text = "Đăng kí đề tài";
+            this.tab_DangKiDT.UseVisualStyleBackColor = true;
             // 
             // guna2GradientButton10
             // 
@@ -2089,22 +2088,6 @@
             this.label31.Size = new System.Drawing.Size(101, 25);
             this.label31.TabIndex = 77;
             this.label31.Text = "Mã đề tài";
-            // 
-            // tb_ThemDT
-            // 
-            this.tb_ThemDT.CheckedState.Parent = this.tb_ThemDT;
-            this.tb_ThemDT.CustomImages.Parent = this.tb_ThemDT;
-            this.tb_ThemDT.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_ThemDT.ForeColor = System.Drawing.Color.White;
-            this.tb_ThemDT.HoverState.Parent = this.tb_ThemDT;
-            this.tb_ThemDT.Image = ((System.Drawing.Image)(resources.GetObject("tb_ThemDT.Image")));
-            this.tb_ThemDT.Location = new System.Drawing.Point(1040, 602);
-            this.tb_ThemDT.Name = "tb_ThemDT";
-            this.tb_ThemDT.ShadowDecoration.Parent = this.tb_ThemDT;
-            this.tb_ThemDT.Size = new System.Drawing.Size(180, 45);
-            this.tb_ThemDT.TabIndex = 18;
-            this.tb_ThemDT.Text = "Thêm";
-            this.tb_ThemDT.Click += new System.EventHandler(this.tb_ThemDT_Click);
             // 
             // guna2GroupBox2
             // 
@@ -2363,6 +2346,22 @@
             this.tb_MaDT.TabIndex = 0;
             this.tb_MaDT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // tb_ThemDT
+            // 
+            this.tb_ThemDT.CheckedState.Parent = this.tb_ThemDT;
+            this.tb_ThemDT.CustomImages.Parent = this.tb_ThemDT;
+            this.tb_ThemDT.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_ThemDT.ForeColor = System.Drawing.Color.White;
+            this.tb_ThemDT.HoverState.Parent = this.tb_ThemDT;
+            this.tb_ThemDT.Image = global::QuanLyDeTaiKhoaHoc.Properties.Resources._102575421_910418189438743_55883774152658909_n;
+            this.tb_ThemDT.Location = new System.Drawing.Point(1040, 602);
+            this.tb_ThemDT.Name = "tb_ThemDT";
+            this.tb_ThemDT.ShadowDecoration.Parent = this.tb_ThemDT;
+            this.tb_ThemDT.Size = new System.Drawing.Size(180, 45);
+            this.tb_ThemDT.TabIndex = 18;
+            this.tb_ThemDT.Text = "Thêm";
+            this.tb_ThemDT.Click += new System.EventHandler(this.tb_ThemDT_Click);
+            // 
             // tab_BCTH
             // 
             this.tab_BCTH.Controls.Add(this.label53);
@@ -2370,11 +2369,11 @@
             this.tab_BCTH.Controls.Add(this.label52);
             this.tab_BCTH.Controls.Add(this.guna2TextBox1);
             this.tab_BCTH.Controls.Add(this.guna2GroupBox8);
-            this.tab_BCTH.Controls.Add(this.guna2GradientButton7);
             this.tab_BCTH.Controls.Add(this.label47);
             this.tab_BCTH.Controls.Add(this.guna2ComboBox3);
             this.tab_BCTH.Controls.Add(this.label34);
             this.tab_BCTH.Controls.Add(this.guna2ComboBox2);
+            this.tab_BCTH.Controls.Add(this.guna2GradientButton7);
             this.tab_BCTH.Location = new System.Drawing.Point(4, 34);
             this.tab_BCTH.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tab_BCTH.Name = "tab_BCTH";
@@ -2383,6 +2382,70 @@
             this.tab_BCTH.TabIndex = 5;
             this.tab_BCTH.Text = "Báo cáo tổng hợp";
             this.tab_BCTH.UseVisualStyleBackColor = true;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(711, 60);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(92, 25);
+            this.label53.TabIndex = 18;
+            this.label53.Text = "Trình độ";
+            // 
+            // guna2TextBox2
+            // 
+            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox2.DefaultText = "";
+            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.DisabledState.Parent = this.guna2TextBox2;
+            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
+            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
+            this.guna2TextBox2.Location = new System.Drawing.Point(716, 97);
+            this.guna2TextBox2.Name = "guna2TextBox2";
+            this.guna2TextBox2.PasswordChar = '\0';
+            this.guna2TextBox2.PlaceholderText = "";
+            this.guna2TextBox2.SelectedText = "";
+            this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
+            this.guna2TextBox2.Size = new System.Drawing.Size(200, 36);
+            this.guna2TextBox2.TabIndex = 17;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(162, 60);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(56, 25);
+            this.label52.TabIndex = 16;
+            this.label52.Text = "Năm";
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Location = new System.Drawing.Point(157, 97);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Size = new System.Drawing.Size(200, 36);
+            this.guna2TextBox1.TabIndex = 15;
             // 
             // guna2GroupBox8
             // 
@@ -2454,21 +2517,6 @@
             this.guna2DataGridView7.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView7.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // guna2GradientButton7
-            // 
-            this.guna2GradientButton7.CheckedState.Parent = this.guna2GradientButton7;
-            this.guna2GradientButton7.CustomImages.Parent = this.guna2GradientButton7;
-            this.guna2GradientButton7.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton7.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton7.HoverState.Parent = this.guna2GradientButton7;
-            this.guna2GradientButton7.Image = ((System.Drawing.Image)(resources.GetObject("guna2GradientButton7.Image")));
-            this.guna2GradientButton7.Location = new System.Drawing.Point(966, 88);
-            this.guna2GradientButton7.Name = "guna2GradientButton7";
-            this.guna2GradientButton7.ShadowDecoration.Parent = this.guna2GradientButton7;
-            this.guna2GradientButton7.Size = new System.Drawing.Size(180, 45);
-            this.guna2GradientButton7.TabIndex = 13;
-            this.guna2GradientButton7.Text = "Hiển thị";
-            // 
             // label47
             // 
             this.label47.AutoSize = true;
@@ -2525,31 +2573,46 @@
             this.guna2ComboBox2.Size = new System.Drawing.Size(140, 36);
             this.guna2ComboBox2.TabIndex = 0;
             // 
-            // tabPage1
+            // guna2GradientButton7
             // 
-            this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.guna2GradientButton2);
-            this.tabPage1.Controls.Add(this.tb_linkDonXin);
-            this.tabPage1.Controls.Add(this.tb_maDeTai3);
-            this.tabPage1.Controls.Add(this.label39);
-            this.tabPage1.Controls.Add(this.label38);
-            this.tabPage1.Controls.Add(this.label37);
-            this.tabPage1.Controls.Add(this.label36);
-            this.tabPage1.Controls.Add(this.label35);
-            this.tabPage1.Controls.Add(this.btn_DuyetGiaHan);
-            this.tabPage1.Controls.Add(this.btn_GiaHan);
-            this.tabPage1.Controls.Add(this.guna2GroupBox5);
-            this.tabPage1.Controls.Add(this.dt_NgayHoanThanh);
-            this.tabPage1.Controls.Add(this.dt_NgayGH);
-            this.tabPage1.Controls.Add(this.tb_maGV4);
-            this.tabPage1.Controls.Add(this.tb_maDXGH);
-            this.tabPage1.Location = new System.Drawing.Point(4, 34);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1231, 671);
-            this.tabPage1.TabIndex = 6;
-            this.tabPage1.Text = "Gia hạn đề tài";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.guna2GradientButton7.CheckedState.Parent = this.guna2GradientButton7;
+            this.guna2GradientButton7.CustomImages.Parent = this.guna2GradientButton7;
+            this.guna2GradientButton7.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientButton7.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton7.HoverState.Parent = this.guna2GradientButton7;
+            this.guna2GradientButton7.Image = global::QuanLyDeTaiKhoaHoc.Properties.Resources.zoom;
+            this.guna2GradientButton7.Location = new System.Drawing.Point(966, 88);
+            this.guna2GradientButton7.Name = "guna2GradientButton7";
+            this.guna2GradientButton7.ShadowDecoration.Parent = this.guna2GradientButton7;
+            this.guna2GradientButton7.Size = new System.Drawing.Size(180, 45);
+            this.guna2GradientButton7.TabIndex = 13;
+            this.guna2GradientButton7.Text = "Hiển thị";
+            // 
+            // tab_GHDT
+            // 
+            this.tab_GHDT.Controls.Add(this.label9);
+            this.tab_GHDT.Controls.Add(this.guna2GradientButton2);
+            this.tab_GHDT.Controls.Add(this.tb_linkDonXin);
+            this.tab_GHDT.Controls.Add(this.tb_maDeTai3);
+            this.tab_GHDT.Controls.Add(this.label39);
+            this.tab_GHDT.Controls.Add(this.label38);
+            this.tab_GHDT.Controls.Add(this.label37);
+            this.tab_GHDT.Controls.Add(this.label36);
+            this.tab_GHDT.Controls.Add(this.label35);
+            this.tab_GHDT.Controls.Add(this.guna2GroupBox5);
+            this.tab_GHDT.Controls.Add(this.dt_NgayHoanThanh);
+            this.tab_GHDT.Controls.Add(this.dt_NgayGH);
+            this.tab_GHDT.Controls.Add(this.tb_maGV4);
+            this.tab_GHDT.Controls.Add(this.tb_maDXGH);
+            this.tab_GHDT.Controls.Add(this.btn_DuyetGiaHan);
+            this.tab_GHDT.Controls.Add(this.btn_GiaHan);
+            this.tab_GHDT.Location = new System.Drawing.Point(4, 34);
+            this.tab_GHDT.Name = "tab_GHDT";
+            this.tab_GHDT.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_GHDT.Size = new System.Drawing.Size(1231, 671);
+            this.tab_GHDT.TabIndex = 6;
+            this.tab_GHDT.Text = "Gia hạn đề tài";
+            this.tab_GHDT.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -2664,38 +2727,6 @@
             this.label35.Size = new System.Drawing.Size(161, 25);
             this.label35.TabIndex = 56;
             this.label35.Text = "Mã đơn gia hạn";
-            // 
-            // btn_DuyetGiaHan
-            // 
-            this.btn_DuyetGiaHan.CheckedState.Parent = this.btn_DuyetGiaHan;
-            this.btn_DuyetGiaHan.CustomImages.Parent = this.btn_DuyetGiaHan;
-            this.btn_DuyetGiaHan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DuyetGiaHan.ForeColor = System.Drawing.Color.White;
-            this.btn_DuyetGiaHan.HoverState.Parent = this.btn_DuyetGiaHan;
-            this.btn_DuyetGiaHan.Image = ((System.Drawing.Image)(resources.GetObject("btn_DuyetGiaHan.Image")));
-            this.btn_DuyetGiaHan.Location = new System.Drawing.Point(1044, 598);
-            this.btn_DuyetGiaHan.Name = "btn_DuyetGiaHan";
-            this.btn_DuyetGiaHan.ShadowDecoration.Parent = this.btn_DuyetGiaHan;
-            this.btn_DuyetGiaHan.Size = new System.Drawing.Size(180, 45);
-            this.btn_DuyetGiaHan.TabIndex = 55;
-            this.btn_DuyetGiaHan.Text = "Duyệt";
-            this.btn_DuyetGiaHan.Click += new System.EventHandler(this.btn_DuyetGiaHan_Click);
-            // 
-            // btn_GiaHan
-            // 
-            this.btn_GiaHan.CheckedState.Parent = this.btn_GiaHan;
-            this.btn_GiaHan.CustomImages.Parent = this.btn_GiaHan;
-            this.btn_GiaHan.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_GiaHan.ForeColor = System.Drawing.Color.White;
-            this.btn_GiaHan.HoverState.Parent = this.btn_GiaHan;
-            this.btn_GiaHan.Image = ((System.Drawing.Image)(resources.GetObject("btn_GiaHan.Image")));
-            this.btn_GiaHan.Location = new System.Drawing.Point(843, 598);
-            this.btn_GiaHan.Name = "btn_GiaHan";
-            this.btn_GiaHan.ShadowDecoration.Parent = this.btn_GiaHan;
-            this.btn_GiaHan.Size = new System.Drawing.Size(180, 45);
-            this.btn_GiaHan.TabIndex = 54;
-            this.btn_GiaHan.Text = "Thêm";
-            this.btn_GiaHan.Click += new System.EventHandler(this.btn_GiaHan_Click);
             // 
             // guna2GroupBox5
             // 
@@ -2878,6 +2909,38 @@
             this.tb_maDXGH.TabIndex = 42;
             this.tb_maDXGH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // btn_DuyetGiaHan
+            // 
+            this.btn_DuyetGiaHan.CheckedState.Parent = this.btn_DuyetGiaHan;
+            this.btn_DuyetGiaHan.CustomImages.Parent = this.btn_DuyetGiaHan;
+            this.btn_DuyetGiaHan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DuyetGiaHan.ForeColor = System.Drawing.Color.White;
+            this.btn_DuyetGiaHan.HoverState.Parent = this.btn_DuyetGiaHan;
+            this.btn_DuyetGiaHan.Image = global::QuanLyDeTaiKhoaHoc.Properties.Resources.check_mark;
+            this.btn_DuyetGiaHan.Location = new System.Drawing.Point(1044, 598);
+            this.btn_DuyetGiaHan.Name = "btn_DuyetGiaHan";
+            this.btn_DuyetGiaHan.ShadowDecoration.Parent = this.btn_DuyetGiaHan;
+            this.btn_DuyetGiaHan.Size = new System.Drawing.Size(180, 45);
+            this.btn_DuyetGiaHan.TabIndex = 55;
+            this.btn_DuyetGiaHan.Text = "Duyệt";
+            this.btn_DuyetGiaHan.Click += new System.EventHandler(this.btn_DuyetGiaHan_Click);
+            // 
+            // btn_GiaHan
+            // 
+            this.btn_GiaHan.CheckedState.Parent = this.btn_GiaHan;
+            this.btn_GiaHan.CustomImages.Parent = this.btn_GiaHan;
+            this.btn_GiaHan.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_GiaHan.ForeColor = System.Drawing.Color.White;
+            this.btn_GiaHan.HoverState.Parent = this.btn_GiaHan;
+            this.btn_GiaHan.Image = global::QuanLyDeTaiKhoaHoc.Properties.Resources._102575421_910418189438743_55883774152658909_n;
+            this.btn_GiaHan.Location = new System.Drawing.Point(843, 598);
+            this.btn_GiaHan.Name = "btn_GiaHan";
+            this.btn_GiaHan.ShadowDecoration.Parent = this.btn_GiaHan;
+            this.btn_GiaHan.Size = new System.Drawing.Size(180, 45);
+            this.btn_GiaHan.TabIndex = 54;
+            this.btn_GiaHan.Text = "Thêm";
+            this.btn_GiaHan.Click += new System.EventHandler(this.btn_GiaHan_Click);
+            // 
             // tab_HoiDong
             // 
             this.tab_HoiDong.Controls.Add(this.label46);
@@ -2887,9 +2950,6 @@
             this.tab_HoiDong.Controls.Add(this.label42);
             this.tab_HoiDong.Controls.Add(this.label41);
             this.tab_HoiDong.Controls.Add(this.label40);
-            this.tab_HoiDong.Controls.Add(this.btn_SuaHD);
-            this.tab_HoiDong.Controls.Add(this.btn_XoaHD);
-            this.tab_HoiDong.Controls.Add(this.btn_ThemHD);
             this.tab_HoiDong.Controls.Add(this.guna2GroupBox6);
             this.tab_HoiDong.Controls.Add(this.cb_Khoa1);
             this.tab_HoiDong.Controls.Add(this.tb_NgNT);
@@ -2898,6 +2958,9 @@
             this.tab_HoiDong.Controls.Add(this.tb_PB1);
             this.tab_HoiDong.Controls.Add(this.tb_ChuTichHD);
             this.tab_HoiDong.Controls.Add(this.tb_MaHD);
+            this.tab_HoiDong.Controls.Add(this.btn_SuaHD);
+            this.tab_HoiDong.Controls.Add(this.btn_XoaHD);
+            this.tab_HoiDong.Controls.Add(this.btn_ThemHD);
             this.tab_HoiDong.Location = new System.Drawing.Point(4, 34);
             this.tab_HoiDong.Name = "tab_HoiDong";
             this.tab_HoiDong.Padding = new System.Windows.Forms.Padding(3);
@@ -2968,54 +3031,6 @@
             this.label40.Size = new System.Drawing.Size(131, 25);
             this.label40.TabIndex = 19;
             this.label40.Text = "Mã hội đồng";
-            // 
-            // btn_SuaHD
-            // 
-            this.btn_SuaHD.CheckedState.Parent = this.btn_SuaHD;
-            this.btn_SuaHD.CustomImages.Parent = this.btn_SuaHD;
-            this.btn_SuaHD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SuaHD.ForeColor = System.Drawing.Color.White;
-            this.btn_SuaHD.HoverState.Parent = this.btn_SuaHD;
-            this.btn_SuaHD.Image = ((System.Drawing.Image)(resources.GetObject("btn_SuaHD.Image")));
-            this.btn_SuaHD.Location = new System.Drawing.Point(1038, 596);
-            this.btn_SuaHD.Name = "btn_SuaHD";
-            this.btn_SuaHD.ShadowDecoration.Parent = this.btn_SuaHD;
-            this.btn_SuaHD.Size = new System.Drawing.Size(180, 45);
-            this.btn_SuaHD.TabIndex = 18;
-            this.btn_SuaHD.Text = "Sửa";
-            this.btn_SuaHD.Click += new System.EventHandler(this.btn_SuaHD_Click);
-            // 
-            // btn_XoaHD
-            // 
-            this.btn_XoaHD.CheckedState.Parent = this.btn_XoaHD;
-            this.btn_XoaHD.CustomImages.Parent = this.btn_XoaHD;
-            this.btn_XoaHD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_XoaHD.ForeColor = System.Drawing.Color.White;
-            this.btn_XoaHD.HoverState.Parent = this.btn_XoaHD;
-            this.btn_XoaHD.Image = ((System.Drawing.Image)(resources.GetObject("btn_XoaHD.Image")));
-            this.btn_XoaHD.Location = new System.Drawing.Point(832, 596);
-            this.btn_XoaHD.Name = "btn_XoaHD";
-            this.btn_XoaHD.ShadowDecoration.Parent = this.btn_XoaHD;
-            this.btn_XoaHD.Size = new System.Drawing.Size(180, 45);
-            this.btn_XoaHD.TabIndex = 17;
-            this.btn_XoaHD.Text = "Xóa";
-            this.btn_XoaHD.Click += new System.EventHandler(this.btn_XoaHD_Click);
-            // 
-            // btn_ThemHD
-            // 
-            this.btn_ThemHD.CheckedState.Parent = this.btn_ThemHD;
-            this.btn_ThemHD.CustomImages.Parent = this.btn_ThemHD;
-            this.btn_ThemHD.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ThemHD.ForeColor = System.Drawing.Color.White;
-            this.btn_ThemHD.HoverState.Parent = this.btn_ThemHD;
-            this.btn_ThemHD.Image = ((System.Drawing.Image)(resources.GetObject("btn_ThemHD.Image")));
-            this.btn_ThemHD.Location = new System.Drawing.Point(630, 596);
-            this.btn_ThemHD.Name = "btn_ThemHD";
-            this.btn_ThemHD.ShadowDecoration.Parent = this.btn_ThemHD;
-            this.btn_ThemHD.Size = new System.Drawing.Size(180, 45);
-            this.btn_ThemHD.TabIndex = 16;
-            this.btn_ThemHD.Text = "Thêm";
-            this.btn_ThemHD.Click += new System.EventHandler(this.btn_ThemHD_Click);
             // 
             // guna2GroupBox6
             // 
@@ -3296,84 +3311,68 @@
             this.tb_MaHD.TabIndex = 1;
             this.tb_MaHD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // guna2TextBox1
+            // btn_SuaHD
             // 
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(157, 97);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(200, 36);
-            this.guna2TextBox1.TabIndex = 15;
+            this.btn_SuaHD.CheckedState.Parent = this.btn_SuaHD;
+            this.btn_SuaHD.CustomImages.Parent = this.btn_SuaHD;
+            this.btn_SuaHD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SuaHD.ForeColor = System.Drawing.Color.White;
+            this.btn_SuaHD.HoverState.Parent = this.btn_SuaHD;
+            this.btn_SuaHD.Image = global::QuanLyDeTaiKhoaHoc.Properties.Resources.pen;
+            this.btn_SuaHD.Location = new System.Drawing.Point(1038, 596);
+            this.btn_SuaHD.Name = "btn_SuaHD";
+            this.btn_SuaHD.ShadowDecoration.Parent = this.btn_SuaHD;
+            this.btn_SuaHD.Size = new System.Drawing.Size(180, 45);
+            this.btn_SuaHD.TabIndex = 18;
+            this.btn_SuaHD.Text = "Sửa";
+            this.btn_SuaHD.Click += new System.EventHandler(this.btn_SuaHD_Click);
             // 
-            // label52
+            // btn_XoaHD
             // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(162, 60);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(56, 25);
-            this.label52.TabIndex = 16;
-            this.label52.Text = "Năm";
+            this.btn_XoaHD.CheckedState.Parent = this.btn_XoaHD;
+            this.btn_XoaHD.CustomImages.Parent = this.btn_XoaHD;
+            this.btn_XoaHD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_XoaHD.ForeColor = System.Drawing.Color.White;
+            this.btn_XoaHD.HoverState.Parent = this.btn_XoaHD;
+            this.btn_XoaHD.Image = global::QuanLyDeTaiKhoaHoc.Properties.Resources.delete;
+            this.btn_XoaHD.Location = new System.Drawing.Point(832, 596);
+            this.btn_XoaHD.Name = "btn_XoaHD";
+            this.btn_XoaHD.ShadowDecoration.Parent = this.btn_XoaHD;
+            this.btn_XoaHD.Size = new System.Drawing.Size(180, 45);
+            this.btn_XoaHD.TabIndex = 17;
+            this.btn_XoaHD.Text = "Xóa";
+            this.btn_XoaHD.Click += new System.EventHandler(this.btn_XoaHD_Click);
             // 
-            // guna2TextBox2
+            // btn_ThemHD
             // 
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Location = new System.Drawing.Point(716, 97);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Size = new System.Drawing.Size(200, 36);
-            this.guna2TextBox2.TabIndex = 17;
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(711, 60);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(92, 25);
-            this.label53.TabIndex = 18;
-            this.label53.Text = "Trình độ";
+            this.btn_ThemHD.CheckedState.Parent = this.btn_ThemHD;
+            this.btn_ThemHD.CustomImages.Parent = this.btn_ThemHD;
+            this.btn_ThemHD.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThemHD.ForeColor = System.Drawing.Color.White;
+            this.btn_ThemHD.HoverState.Parent = this.btn_ThemHD;
+            this.btn_ThemHD.Image = global::QuanLyDeTaiKhoaHoc.Properties.Resources._102575421_910418189438743_55883774152658909_n;
+            this.btn_ThemHD.Location = new System.Drawing.Point(630, 596);
+            this.btn_ThemHD.Name = "btn_ThemHD";
+            this.btn_ThemHD.ShadowDecoration.Parent = this.btn_ThemHD;
+            this.btn_ThemHD.Size = new System.Drawing.Size(180, 45);
+            this.btn_ThemHD.TabIndex = 16;
+            this.btn_ThemHD.Text = "Thêm";
+            this.btn_ThemHD.Click += new System.EventHandler(this.btn_ThemHD_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1240, 711);
-            this.Controls.Add(this.tab_GHDT);
+            this.Controls.Add(this.tab_main);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "frmMain";
             this.Text = "Quản lí đề tài nghiên cứu khoa học";
             this.Load += new System.EventHandler(this.frmMain_Load);
-            this.tab_GHDT.ResumeLayout(false);
-            this.tab_DKDT.ResumeLayout(false);
-            this.tab_DKDT.PerformLayout();
+            this.tab_main.ResumeLayout(false);
+            this.tab_GiangVien.ResumeLayout(false);
+            this.tab_GiangVien.PerformLayout();
             this.guna2GroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_GiangVien)).EndInit();
             this.tab_DDT.ResumeLayout(false);
@@ -3384,20 +3383,20 @@
             this.tab_QLDT.PerformLayout();
             this.guna2GroupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DeTai)).EndInit();
-            this.tab_QLGV.ResumeLayout(false);
-            this.tab_QLGV.PerformLayout();
+            this.tab_NghiemThu.ResumeLayout(false);
+            this.tab_NghiemThu.PerformLayout();
             this.guna2GroupBox7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_BBNT)).EndInit();
-            this.tab_NTDT.ResumeLayout(false);
-            this.tab_NTDT.PerformLayout();
+            this.tab_DangKiDT.ResumeLayout(false);
+            this.tab_DangKiDT.PerformLayout();
             this.guna2GroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.tab_BCTH.ResumeLayout(false);
             this.tab_BCTH.PerformLayout();
             this.guna2GroupBox8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView7)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tab_GHDT.ResumeLayout(false);
+            this.tab_GHDT.PerformLayout();
             this.guna2GroupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_GiaHan)).EndInit();
             this.tab_HoiDong.ResumeLayout(false);
@@ -3409,14 +3408,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl tab_GHDT;
-        private System.Windows.Forms.TabPage tab_DKDT;
-        private System.Windows.Forms.TabPage tab_DDT;
-        private System.Windows.Forms.TabPage tab_QLDT;
-        private System.Windows.Forms.TabPage tab_QLGV;
-        private System.Windows.Forms.TabPage tab_NTDT;
-        private System.Windows.Forms.TabPage tab_BCTH;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2DataGridView dgv_GiangVien;
@@ -3432,7 +3423,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton btn_SuaDT;
         private Guna.UI2.WinForms.Guna2GradientButton btn_XoaDT;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
-        private System.Windows.Forms.TabPage tab_HoiDong;
         private Guna.UI2.WinForms.Guna2GradientButton btn_SuaHD;
         private Guna.UI2.WinForms.Guna2GradientButton btn_XoaHD;
         private Guna.UI2.WinForms.Guna2GradientButton btn_ThemHD;
@@ -3531,7 +3521,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton btn_ThemBB;
         private System.Drawing.Printing.PrintDocument printDocument3 = new System.Drawing.Printing.PrintDocument();
         private System.Windows.Forms.PrintDialog printDialog1 = new System.Windows.Forms.PrintDialog();
-        private System.Windows.Forms.TabPage tabPage1;
         public Guna.UI2.WinForms.Guna2TextBox tb_maDeTai3;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label38;
@@ -3607,5 +3596,14 @@
         private System.Windows.Forms.Label label52;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        public System.Windows.Forms.TabControl tab_main;
+        public System.Windows.Forms.TabPage tab_GiangVien;
+        public System.Windows.Forms.TabPage tab_DDT;
+        public System.Windows.Forms.TabPage tab_QLDT;
+        public System.Windows.Forms.TabPage tab_NghiemThu;
+        public System.Windows.Forms.TabPage tab_DangKiDT;
+        public System.Windows.Forms.TabPage tab_BCTH;
+        public System.Windows.Forms.TabPage tab_HoiDong;
+        public System.Windows.Forms.TabPage tab_GHDT;
     }
 }
