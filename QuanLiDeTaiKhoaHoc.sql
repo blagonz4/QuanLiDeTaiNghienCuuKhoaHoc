@@ -7,7 +7,7 @@ CREATE TABLE TYPEACCOUNT(
 );
 
 CREATE TABLE ACCOUNT(
-    maAccount int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+    maAccount int NOT NULL PRIMARY KEY,
     tenAccount varchar(255),
 	Email varchar(255),
 	Pass varchar(255),
@@ -109,26 +109,39 @@ INSERT [dbo].[TYPEACCOUNT] ([tenTypeAccount]) VALUES ( N'Cán bộ')
 
 -- Tài khoản
 
-INSERT into ACCOUNT  VALUES ( N'Nguyễn Thành Đạt', N'datnguyen777@gmail.com', N'1', N'0945135184', 1)
-INSERT into ACCOUNT  VALUES ( N'Trần Thanh Lâm', N'thanhlam@gmail.com', N'1', N'0913758984', 1)
-INSERT into ACCOUNT  VALUES ( N'Lương Duy Bảo', N'duybao@gmail.com', N'1', N'0782856984', 2)
+INSERT [dbo].[ACCOUNT] ([maAccount], [tenAccount], [Email], [Pass], [Phone], [maTypeAccount]) VALUES (1, N'Nguy?n Thành Ð?t', N'datnguyen777@gmail.com', N'1', N'0945135184', 1)
+INSERT [dbo].[ACCOUNT] ([maAccount], [tenAccount], [Email], [Pass], [Phone], [maTypeAccount]) VALUES (2, N'Tr?n Thanh Lâm', N'thanhlam@gmail.com', N'1', N'0913758984', 1)
+INSERT [dbo].[ACCOUNT] ([maAccount], [tenAccount], [Email], [Pass], [Phone], [maTypeAccount]) VALUES (3, N'Nguyễn Văn A', N'nguyenvana@gmail.com', N'1', N'0945135186', 1)
+INSERT [dbo].[ACCOUNT] ([maAccount], [tenAccount], [Email], [Pass], [Phone], [maTypeAccount]) VALUES (4, N'Nguyễn Văn B', N'nguyenvanb@gmail.com', N'1', N'0913758987', 1)
+INSERT [dbo].[ACCOUNT] ([maAccount], [tenAccount], [Email], [Pass], [Phone], [maTypeAccount]) VALUES (5, N'Nguyễn Văn C', N'nguyenvanc@gmail.com', N'1', N'0913758988', 1)
+
+
+INSERT [dbo].[ACCOUNT] ([maAccount], [tenAccount], [Email], [Pass], [Phone], [maTypeAccount]) VALUES (6, N'Lương Duy Bảo', N'duybao@gmail.com', N'1', N'0782856984', 2)
+INSERT [dbo].[ACCOUNT] ([maAccount], [tenAccount], [Email], [Pass], [Phone], [maTypeAccount]) VALUES (7, N'Trần Văn A', N'tranvana@gmail.com', N'1', N'0782856995', 2)
 
 
 -- Hợp đồng
 
 INSERT into HOPDONG( tenHopDong) values ('Biên chế')
+INSERT [dbo].[HOPDONG] ([tenHopDong]) VALUES ( N'Hợp đồng')
+INSERT [dbo].[HOPDONG] ([tenHopDong]) VALUES (N'Thỉnh giảng')
 
 -- Giảng viên
 
-INSERT [dbo].[GIANGVIEN] ([maGiangVien], [tenGiangVien], [Nganh],[trinhDo],[ngaySinh], [maHopDong], [maAccount], [maKhoa]) VALUES (1, N'Nguyễn Thành Đạt', N'Phần mềm',N'Giáo sư',CAST(N'2000-07-06' AS Date), 1, 1,'CNPM')
-INSERT [dbo].[GIANGVIEN] ([maGiangVien], [tenGiangVien], [Nganh],[trinhDo],[ngaySinh], [maHopDong], [maAccount], [maKhoa]) VALUES (2, N'Trần Thanh Lâm', N'Phần cứng',N'Thạc Sĩ',CAST(N'2000-07-06' AS Date), 1, 1,'KTMT')
-INSERT [dbo].[GIANGVIEN] ([maGiangVien], [tenGiangVien], [Nganh],[trinhDo],[ngaySinh], [maHopDong], [maAccount], [maKhoa]) VALUES (3, N'Lương Duy Bảo', N'Phần cứng',N'Thạc Sĩ',CAST(N'2000-07-06' AS Date), 1, 2,'KHMT')
+INSERT [dbo].[GIANGVIEN] ([maGiangVien], [tenGiangVien], [Nganh], [trinhDo], [ngaySinh], [maHopDong], [maAccount], [maKhoa]) VALUES (1, N'Nguyễn Thành Đạt', N'Phần mềm', N'Giáo sư', CAST(N'2000-07-06' AS Date), 1, 1, N'CNPM')
+INSERT [dbo].[GIANGVIEN] ([maGiangVien], [tenGiangVien], [Nganh], [trinhDo], [ngaySinh], [maHopDong], [maAccount], [maKhoa]) VALUES (2, N'Trần Thanh Lâm', N'Phần cứng', N'Thạc Sĩ', CAST(N'2000-07-06' AS Date), 2, 2, N'KTMT')
+INSERT [dbo].[GIANGVIEN] ([maGiangVien], [tenGiangVien], [Nganh], [trinhDo], [ngaySinh], [maHopDong], [maAccount], [maKhoa]) VALUES (3, N'Nguyễn Văn A', N'Toán Lí', N'Thạc Sĩ', CAST(N'2000-07-06' AS Date), 3, 3, N'KHMT')
+INSERT [dbo].[GIANGVIEN] ([maGiangVien], [tenGiangVien], [Nganh], [trinhDo], [ngaySinh], [maHopDong], [maAccount], [maKhoa]) VALUES (4, N'Nguyễn Văn B', N'Khoa học', N'Thạc Sĩ', CAST(N'2000-07-06' AS Date), 2, 4, N'BMTL')
+INSERT [dbo].[GIANGVIEN] ([maGiangVien], [tenGiangVien], [Nganh], [trinhDo], [ngaySinh], [maHopDong], [maAccount], [maKhoa]) VALUES (5, N'Nguyễn Văn C', N'Mạng', N'Thạc Sĩ', CAST(N'2000-07-06' AS Date), 1, 5, N'MMTT')
 
 -- Trạng thái
 
-INSERT [dbo].[TRANGTHAI] ( [tenTrangThai]) VALUES ( N'DA NOP')
-INSERT [dbo].[TRANGTHAI] ( [tenTrangThai]) VALUES ( N'DA CHAM')
-INSERT [dbo].[TRANGTHAI] ( [tenTrangThai]) VALUES ( N'HUY BO')
+INSERT [dbo].[TRANGTHAI] ( [tenTrangThai]) VALUES (N'DA DANG KI')
+INSERT [dbo].[TRANGTHAI] ( [tenTrangThai]) VALUES ( N'DA DUYET DANG KI')
+INSERT [dbo].[TRANGTHAI] ( [tenTrangThai]) VALUES ( N'DA HUY')
+INSERT [dbo].[TRANGTHAI] ( [tenTrangThai]) VALUES ( N'DA GIA HAN')
+INSERT [dbo].[TRANGTHAI] ( [tenTrangThai]) VALUES ( N'DA NGHIEM THU')
+INSERT [dbo].[TRANGTHAI] ( [tenTrangThai]) VALUES ( N'CHO DUYET GIA HAN')
 
 -- Khoa
 
@@ -145,9 +158,11 @@ insert into HOIDONGNGHIEMTHU(maHoiDong,chuTichHoiDong, phanBien1,phanBien2,thuKi
 insert into HOIDONGNGHIEMTHU(maHoiDong,chuTichHoiDong, phanBien1,phanBien2,thuKi, ngayNghiemThu, maKhoa) values( '2',N'Nguyễn Thành Đạt',N'Trần Thanh Lâm',N'LÊ Thanh Trọng',N'Lương Duy Bảo',CAST(N'2020-05-06T00:00:00.000' AS DateTime),'CNPM')
 
 -- Đề tài 
-INSERT [dbo].[DETAI] ([maDeTai], [tenDeTai], [ngayThucHien], [linhVuc], [capDo], [ketQua], [maTrangThai], [maGiangVien], [maHoiDong], [linkDeTai]) VALUES (1, N'Trí tuệ nhân tạo', CAST(N'2018-01-01' AS Date), N'AI', N'KHOA', N'Đạt', 2, 3, 1, NULL)
-INSERT [dbo].[DETAI] ([maDeTai], [tenDeTai], [ngayThucHien], [linhVuc], [capDo], [ketQua], [maTrangThai], [maGiangVien], [maHoiDong], [linkDeTai]) VALUES (2, N'Mạng xã hội cho mè', CAST(N'2020-05-06' AS Date), N'Phần mềm', N'KHOA', N'Đạt', 2, 1, 2, NULL)
-INSERT [dbo].[DETAI] ([maDeTai], [tenDeTai], [ngayThucHien], [linhVuc], [capDo], [ketQua], [maTrangThai], [maGiangVien], [maHoiDong], [linkDeTai]) VALUES (3, N'Mạch đèn cây thông noel', CAST(N'2019-10-12' AS Date), N'Phần cứng', N'KHOA', N'Đạt', 2, 2, 1, NULL)
+INSERT [dbo].[DETAI] ([maDeTai], [tenDeTai], [ngayThucHien], [linhVuc], [capDo], [ketQua], [linkDeTai], [maTrangThai], [maGiangVien], [maHoiDong]) VALUES (1, N'TRI TUE NHAN TAO', CAST(N'2018-01-01' AS Date), N'AI', N'KHOA', N'DAT', NULL, 2, 3, 1)
+INSERT [dbo].[DETAI] ([maDeTai], [tenDeTai], [ngayThucHien], [linhVuc], [capDo], [ketQua], [linkDeTai], [maTrangThai], [maGiangVien], [maHoiDong]) VALUES (2, N'MANG XA HOI CHO MEO', CAST(N'2020-05-06' AS Date), N'PHAN MEM', N'KHOA', N'DAT', NULL, 2, 1, 2)
+INSERT [dbo].[DETAI] ([maDeTai], [tenDeTai], [ngayThucHien], [linhVuc], [capDo], [ketQua], [linkDeTai], [maTrangThai], [maGiangVien], [maHoiDong]) VALUES (3, N'MACH DEN CAY THONG NOEL', CAST(N'2019-10-12' AS Date), N'KTMT', N'KHOA', N'DAT', NULL, 2, 2, 1)
+INSERT [dbo].[DETAI] ([maDeTai], [tenDeTai], [ngayThucHien], [linhVuc], [capDo], [ketQua], [linkDeTai], [maTrangThai], [maGiangVien], [maHoiDong]) VALUES (4, N'Facebook', CAST(N'2018-05-06' AS Date), N'Xã hội', N'Trường', N'Đạt', NULL, 5, 3, 2)
+INSERT [dbo].[DETAI] ([maDeTai], [tenDeTai], [ngayThucHien], [linhVuc], [capDo], [ketQua], [linkDeTai], [maTrangThai], [maGiangVien], [maHoiDong]) VALUES (5, N'Instagram', CAST(N'2017-10-12' AS Date), N'Chat', N'Bộ', N'Không đạt', NULL, 5, 4, 1)	
 
 
 -- Biên bản nghiệm thu

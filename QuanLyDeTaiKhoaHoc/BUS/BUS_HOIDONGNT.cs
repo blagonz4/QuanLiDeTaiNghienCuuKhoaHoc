@@ -53,5 +53,9 @@ namespace QuanLyDeTaiKhoaHoc.BUS
         {
             return DAL_HOIDONGNT.Instance.GetNextID();
         }
+        public DataTable BaoCaoThanhVien()
+        {
+            return DAL_HOIDONGNT.Instance.BaoCaoThanhVien();
+        }
     }
 }

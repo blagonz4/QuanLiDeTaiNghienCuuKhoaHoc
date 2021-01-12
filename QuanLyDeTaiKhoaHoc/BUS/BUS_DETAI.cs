@@ -66,5 +66,29 @@ namespace QuanLyDeTaiKhoaHoc.BUS
         {
             return DAL_DETAI.Instance.GetError();
         }
+        public DataTable BaoCaoNamKhoa()
+        {
+            return DAL_DETAI.Instance.BaoCaoNamKhoa();
+        }
+        public DataTable BaoCaoLoai()
+        {
+            return DAL_DETAI.Instance.BaoCaoLoai();
+        }
+        public DataTable BaoCaoTinhTrang()
+        {
+            return DAL_DETAI.Instance.BaoCaoTinhTrang();
+        }
+        public DataTable BaoCaoLinhVuc()
+        {
+            return DAL_DETAI.Instance.BaoCaoLinhVuc();
+        }
+        public DataTable BaoCaoGiangVienThucHienDeTai()
+        {
+            return DAL_DETAI.Instance.BaoCaoGiangVienThucHienDeTai();
+        }
+        public DataTable BaoCaoChiTiet()
+        {
+            return DAL_DETAI.Instance.BaoCaoChiTiet();
+        }
     }
 }

@@ -45,6 +45,6 @@ C:\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.c
 C:\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.csproj.CopyComplete
 C:\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.exe
 C:\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.pdb
-C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.csprojAssemblyReference.cache
 C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.GUI.Login.resources
 C:\Users\B365M AORUS ELite\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.GUI.Login.resources
+C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.csprojAssemblyReference.cache

@@ -203,10 +203,6 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMain"];
             Dictionary<string, string> param = new Dictionary<string, string>();
             DataTable dt = new DataTable();
-       /*     DataTable check = new DataTable();
-            DataTable check1 = new DataTable();
-            DataTable check2 = new DataTable();
-            DataTable check3 = new DataTable();*/
 
             string LoadQuery = "SELECT A.tenGiangVien FROM GIANGVIEN A, DETAI B, HOIDONGNGHIEMTHU C " +
                 "WHERE A.maGiangVien = B.maGiangVien AND B.maHoiDong = C.maHoiDong AND B.maDeTai = @maDeTai AND " +
@@ -226,42 +222,88 @@ namespace QuanLyDeTaiKhoaHoc.DAL
                     return true;
             }
             return false;
+        }
+        public DataTable BaoCaoNamKhoa()
+        {
+            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMain"];
 
-   /*         string LoadQuery1 = " SELECT chuTichHoiDong FROM HOIDONGNGHIEMTHU WHERE maHoiDong = @maHoiDong";
-            string LoadQuery2 = " SELECT phanBien1 FROM HOIDONGNGHIEMTHU WHERE maHoiDong = @maHoiDong";
-            string LoadQuery3 = " SELECT phanBien2 FROM HOIDONGNGHIEMTHU WHERE maHoiDong = @maHoiDong";
-            string LoadQuery4 = " SELECT thuKi FROM HOIDONGNGHIEMTHU WHERE maHoiDong = @maHoiDong";
-            check = HandleDB.Instance.ExecuteQuery(LoadQuery1, param);
+            Dictionary<string, string> param = new Dictionary<string, string>();
 
-            check1 = HandleDB.Instance.ExecuteQuery(LoadQuery2, param);
-
-            check2 = HandleDB.Instance.ExecuteQuery(LoadQuery3, param);
-
-            check3 = HandleDB.Instance.ExecuteQuery(LoadQuery4, param);
-
-            if (dt == check)
-            {
-                MessageBox.Show("Chủ tịch hội đồng là chủ nhiệm đề tài");
-                return false;
-            }
-            if (dt == check1)
-            {
-                MessageBox.Show("Phản biện 1 của hội đồng là chủ nhiệm đề tài");
-                return false;
-            }
-            if (dt == check2)
-            {
-                MessageBox.Show("Phản biện 2 của hội đồng là chủ nhiệm đề tài");
-                return false;
-            }
-            if (dt == check3)
-            {
-                MessageBox.Show("Thư kí hội đồng là chủ nhiệm đề tài");
-                return false;
-            }
-            return true;*/
-
+            DataTable dt = new DataTable();
+            string LoadQuery = "";
+            LoadQuery += "SELECT A.maDeTai as 'Mã đề tài', A.tenDeTai as 'Tên đề tài' from DETAI A, GIANGVIEN B WHERE A.maGiangVien = B.maGiangVien and " +
+                "B.maKhoa = @maKhoa and Year(A.ngayThucHien) = @nam ";
+            param.Add("@maKhoa", ((frmMain)f).cb_Khoabc.SelectedValue.ToString());
+            param.Add("@nam", ((frmMain)f).tb_Nambc.Text);
+            dt = HandleDB.Instance.ExecuteQuery(LoadQuery, param);
+            return dt;
         }
 
+        public DataTable BaoCaoLoai()
+        {
+            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMain"];
+
+            Dictionary<string, string> param = new Dictionary<string, string>();
+
+            DataTable dt = new DataTable();
+            string LoadQuery = "";
+            LoadQuery += "SELECT maDeTai as 'Mã đề tài', tenDeTai as 'Tên đề tài' from DETAI WHERE ketQua = @ketQua ";
+            param.Add("@ketQua", ((frmMain)f).cb_KetQuabc.Text);
+            dt = HandleDB.Instance.ExecuteQuery(LoadQuery, param);
+            return dt;
+        }
+        
+        public DataTable BaoCaoTinhTrang()
+        {
+            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMain"];
+
+            Dictionary<string, string> param = new Dictionary<string, string>();
+
+            DataTable dt = new DataTable();
+            string LoadQuery = "";
+            LoadQuery += "SELECT maDeTai as 'Mã đề tài', tenDeTai as 'Tên đề tài' from DETAI WHERE maTrangThai = @maTrangThai ";
+            param.Add("@maTrangThai", ((frmMain)f).cb_TinhTrangbc.SelectedValue.ToString());
+            dt = HandleDB.Instance.ExecuteQuery(LoadQuery, param);
+            return dt;
+        }
+        public DataTable BaoCaoLinhVuc()
+        {
+            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMain"];
+
+            Dictionary<string, string> param = new Dictionary<string, string>();
+
+            DataTable dt = new DataTable();
+            string LoadQuery = "";
+            LoadQuery += "SELECT maDeTai as 'Mã đề tài', tenDeTai as 'Tên đề tài' from DETAI WHERE linhVuc = @linhVuc ";
+            param.Add("@linhVuc", ((frmMain)f).tb_Linhvucbc.Text);
+            dt = HandleDB.Instance.ExecuteQuery(LoadQuery, param);
+            return dt;
+        }
+        public DataTable BaoCaoGiangVienThucHienDeTai()
+        {
+            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMain"];
+
+            Dictionary<string, string> param = new Dictionary<string, string>();
+
+            DataTable dt = new DataTable();
+            string LoadQuery = "";
+            LoadQuery += "SELECT A.maGiangVien, A.tenGiangVien, B.maDeTai, B.tenDeTai FROM GIANGVIEN A, DETAI B WHERE A.maGiangVien = B.maGiangVien AND A.tenGiangVien = @tenGiangVien";
+            param.Add("@tenGiangVien", ((frmMain)f).tb_TenGVbc.Text);
+            dt = HandleDB.Instance.ExecuteQuery(LoadQuery, param);
+            return dt;
+        }
+        public DataTable BaoCaoChiTiet()
+        {
+            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMain"];
+
+            Dictionary<string, string> param = new Dictionary<string, string>();
+
+            DataTable dt = new DataTable();
+            string LoadQuery = "SELECT maDeTai as 'Mã đề tài', tenDeTai as 'Tên đề tài', ngayThucHien as 'Ngày thực hiện', linhVuc as 'Lĩnh vực', capDo as 'Cấp độ', ketQua as 'Kết quả', " +
+                "linkDeTai as 'Link đề tài', maTrangThai as 'Mã trạng thái', maHoiDong as 'Mã hội đồng' from DETAI WHERE maDeTai = @maDeTai";
+            param.Add("@maDeTai", ((frmMain)f).tb_MaDTbc.Text);
+            dt = HandleDB.Instance.ExecuteQuery(LoadQuery, param);
+            return dt;
+        }
     }
 }

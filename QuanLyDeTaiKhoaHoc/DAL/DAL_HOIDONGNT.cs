@@ -138,7 +138,21 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             }
             return nextID;
         }
+    
+        public DataTable BaoCaoThanhVien()
+        {
+            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMain"];
 
+            Dictionary<string, string> param = new Dictionary<string, string>();
+
+            DataTable dt = new DataTable();
+            string LoadQuery = "";
+            LoadQuery += "SELECT A.chuTichHoiDong  as 'Chủ tịch hội đồng', A.phanBien1 as 'Phản biện 1', A.phanBien2 as 'Phản biện 2', A.thuKi as 'Thư kí' FROM HOIDONGNGHIEMTHU A, DETAI B " +
+                "WHERE A.maHoiDong = B.maHoiDong and B.maDeTai = @maDeTai";
+            param.Add("@maDeTai", ((frmMain)f).tb_MaDTbc.Text);
+            dt = HandleDB.Instance.ExecuteQuery(LoadQuery, param);
+            return dt;
+        }
 
 
     }

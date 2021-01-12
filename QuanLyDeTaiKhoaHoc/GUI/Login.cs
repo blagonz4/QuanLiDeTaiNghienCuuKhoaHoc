@@ -65,12 +65,18 @@ namespace QuanLyDeTaiKhoaHoc.GUI
 
         private void Login_KeyPress(object sender, KeyPressEventArgs e)
         {
-            LoginCheck();
+            if (e.KeyChar == (char)13)
+            {
+                LoginCheck();
+            }
         }
 
         private void btn_Login_KeyPress(object sender, KeyPressEventArgs e)
         {
-            LoginCheck();
+            if (e.KeyChar == (char)13)
+            {
+                LoginCheck();
+            }
         }
     }
 

@@ -53,7 +53,7 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             param.Add("@maGiangVien", ((frmMain)f).tb_MaGV.Text);
             param.Add("@tenGiangVien", ((frmMain)f).tb_TenGV.Text);
             param.Add("@Nganh", ((frmMain)f).tb_ChuyenNganh.Text);
-            param.Add("@maHopDong", ((frmMain)f).tb_HopDong.Text);
+            param.Add("@maHopDong", ((frmMain)f).cb_HopDong.SelectedValue.ToString());
             param.Add("@maKhoa", ((frmMain)f).cb_Khoa.SelectedValue.ToString());
             param.Add("@ngaySinh", ((frmMain)f).dt_NgSinh.Value.ToString());
             param.Add("@trinhDo", ((frmMain)f).tb_trinhDo.Text);
@@ -94,7 +94,7 @@ namespace QuanLyDeTaiKhoaHoc.DAL
             param.Add("@maGiangVien", ((frmMain)f).tb_MaGV.Text);
             param.Add("@tenGiangVien", ((frmMain)f).tb_TenGV.Text);
             param.Add("@Nganh", ((frmMain)f).tb_ChuyenNganh.Text);
-            param.Add("@maHopDong", ((frmMain)f).tb_HopDong.Text);
+            param.Add("@maHopDong", ((frmMain)f).cb_HopDong.SelectedValue.ToString());
             param.Add("@maKhoa", ((frmMain)f).cb_Khoa.SelectedValue.ToString());
             param.Add("@trinhDo", ((frmMain)f).tb_trinhDo.Text);
             param.Add("@ngaySinh", ((frmMain)f).dt_NgSinh.Value.ToString());
@@ -119,6 +119,21 @@ namespace QuanLyDeTaiKhoaHoc.DAL
                 ++nextID;
             }
             return nextID;
+        }
+        public DataTable BaoCaoTrinhDo()
+        {
+            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMain"];
+
+            Dictionary<string, string> param = new Dictionary<string, string>();
+
+            DataTable dt = new DataTable();
+            string LoadQuery = "";
+            LoadQuery += "SELECT A.maGiangVien, A.tenGiangVien, A.trinhDo FROM GIANGVIEN A, KHOA B, DETAI C WHERE " +
+                "A.maKhoa = B.maKhoa AND A.maGiangVien = C.maGiangVien AND B.maKhoa = @maKhoa AND Year(C.ngayThucHien) = @nam ";
+            param.Add("@maKhoa", ((frmMain)f).cb_Khoabc.SelectedValue.ToString());
+            param.Add("@nam", ((frmMain)f).tb_Nambc.Text);
+            dt = HandleDB.Instance.ExecuteQuery(LoadQuery, param);
+            return dt;
         }
 
     }

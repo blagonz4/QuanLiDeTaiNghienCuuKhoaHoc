@@ -36,14 +36,17 @@ namespace QuanLyDeTaiKhoaHoc.GUI
 
         public void Phanquyen() // Phân quyền đăng nhập
         {
-            if (this.maTypeAccount.CompareTo("2") == 0) // giảng viên 
+            if (this.maTypeAccount.CompareTo("2") == 0) // nhân viên phòng khoa học
             {
+
                 tab_main.Controls.Remove(tab_DangKiDT);
                 tab_main.Controls.Remove(tab_GHDT);
-         
+
+             
+
 
             }
-            else if (this.maTypeAccount.CompareTo("1") == 0)// nhân viên phòng khoa học
+            else if (this.maTypeAccount.CompareTo("1") == 0)// giảng viên
             {
                 tab_main.Controls.Remove(tab_GiangVien);
                 tab_main.Controls.Remove(tab_HoiDong);
@@ -51,6 +54,9 @@ namespace QuanLyDeTaiKhoaHoc.GUI
                 tab_main.Controls.Remove(tab_BCTH);
                 tab_main.Controls.Remove(tab_NghiemThu);
                 tab_main.Controls.Remove(tab_QLDT);
+                tab_main.Controls.Remove(tab_PhanCong);
+
+                tab_GHDT.Controls.Remove(btn_DuyetGiaHan);
 
             }
             else if (this.maTypeAccount.CompareTo("3") == 0)// nhân viên bảo trì
@@ -77,6 +83,8 @@ namespace QuanLyDeTaiKhoaHoc.GUI
             dgv_BBNT.DataSource = BUS_BIENBANNT.Instance.GetListBBNT();
             dgv_GiaHan.DataSource = BUS_DONXINGIAHAN.Instance.GetListDXGH();
             dgv_PhanCong.DataSource = BUS_DETAI.Instance.GetListHoiDong();
+            cb_Khoabc.DataSource = BUS_KHOA.Instance.GetListKhoa();
+            cb_TinhTrangbc.DataSource = BUS_TRANGTHAI.Instance.GetListTrangThai();
 
 
             // load combo box khoa
@@ -102,8 +110,38 @@ namespace QuanLyDeTaiKhoaHoc.GUI
             cb_TrangThai3.ValueMember = "maTrangThai";
             cb_TrangThai3.Text = " Chọn trạng thái ";
 
+            // load combobox hopdong
 
-         
+            cb_HopDong.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cb_HopDong.DropDownStyle = ComboBoxStyle.DropDownList;
+            cb_HopDong.DisplayMember = "tenHopDong";
+            cb_HopDong.ValueMember = "maHopDong";
+            cb_HopDong.Text = " Chọn hợp đồng ";
+
+            // load combobox khoabc
+            cb_Khoabc.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cb_Khoabc.DropDownStyle = ComboBoxStyle.DropDownList;
+            cb_Khoabc.DisplayMember = "tenKhoa";
+            cb_Khoabc.ValueMember = "maKhoa";
+            cb_Khoabc.Text = " Chọn tên khoa ";
+
+            // load combo box trang thai
+            cb_TinhTrangbc.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cb_TinhTrangbc.DropDownStyle = ComboBoxStyle.DropDownList;
+            cb_TinhTrangbc.DisplayMember = "tenTrangThai";
+            cb_TinhTrangbc.ValueMember = "maTrangThai";
+            cb_TinhTrangbc.Text = " Chọn trạng thái ";
+
+            if(cb_DuyetTheo.Text == "Năm, khoa")
+            {
+                cb_Khoabc.Visible = true;
+                tb_Nambc.Visible = true;
+                cb_TinhTrangbc.Visible = false;
+                cb_KetQuabc.Visible = false;
+                tb_Linhvucbc.Visible = false;
+                tb_TenGV.Visible = false;
+                tb_MaDTbc.Visible = false;
+            }
         }
 
         private void dgv_GiangVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -113,7 +151,7 @@ namespace QuanLyDeTaiKhoaHoc.GUI
                 tb_MaGV.Text = dgv_GiangVien.Rows[e.RowIndex].Cells["maGiangVien"].Value.ToString();
                 tb_TenGV.Text = dgv_GiangVien.Rows[e.RowIndex].Cells["tenGiangVien"].Value.ToString();
                 dt_NgSinh.Text = dgv_GiangVien.Rows[e.RowIndex].Cells["ngaySinh"].Value.ToString();
-                tb_HopDong.Text = dgv_GiangVien.Rows[e.RowIndex].Cells["maHopDong"].Value.ToString();
+                cb_HopDong.SelectedValue = dgv_GiangVien.Rows[e.RowIndex].Cells["maHopDong"].Value.ToString();
                 tb_ChuyenNganh.Text = dgv_GiangVien.Rows[e.RowIndex].Cells["Nganh"].Value.ToString();
                 tb_trinhDo.Text = dgv_GiangVien.Rows[e.RowIndex].Cells["trinhDo"].Value.ToString();
                 cb_Khoa.SelectedValue = dgv_GiangVien.Rows[e.RowIndex].Cells["maKhoa1"].Value.ToString();
@@ -142,7 +180,7 @@ namespace QuanLyDeTaiKhoaHoc.GUI
                 tb_MaGV.Text = dgv_GiangVien.Rows[e.RowIndex].Cells["maGiangVien"].Value.ToString();
                 tb_TenGV.Text = dgv_GiangVien.Rows[e.RowIndex].Cells["tenGiangVien"].Value.ToString();
                 dt_NgSinh.Text = dgv_GiangVien.Rows[e.RowIndex].Cells["ngaySinh"].Value.ToString();
-                tb_HopDong.Text = dgv_GiangVien.Rows[e.RowIndex].Cells["maHopDong"].Value.ToString();
+                cb_HopDong.SelectedValue = dgv_GiangVien.Rows[e.RowIndex].Cells["maHopDong"].Value.ToString();
                 tb_ChuyenNganh.Text = dgv_GiangVien.Rows[e.RowIndex].Cells["Nganh"].Value.ToString();
                 tb_trinhDo.Text = dgv_GiangVien.Rows[e.RowIndex].Cells["trinhDo"].Value.ToString();
                 cb_Khoa.SelectedValue = dgv_GiangVien.Rows[e.RowIndex].Cells["maKhoa1"].Value.ToString();
@@ -256,6 +294,8 @@ namespace QuanLyDeTaiKhoaHoc.GUI
         private void btn_DuyetDeTai_Click(object sender, EventArgs e)
         {
             BUS_DETAI.Instance.DuyetDeTai();
+            dgv_DeTai.DataSource = BUS_DETAI.Instance.GetListDeTai();
+            dgv_DuyetDeTai.DataSource = BUS_DETAI.Instance.GetListDeTaiChoDuyet();
         }
 
         private void dgv_DuyetDeTai_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -503,12 +543,12 @@ namespace QuanLyDeTaiKhoaHoc.GUI
         {
             if (e.RowIndex != -1)
             {
-                tb_MaDT2.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["maDeTai1"].Value.ToString();
-                tb_TenDT2.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["tenDeTai1"].Value.ToString();
-                tb_LinhVuc2.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["linhVuc1"].Value.ToString();
-                cb_CapDo2.SelectedValue = guna2DataGridView1.Rows[e.RowIndex].Cells["capDo1"].Value.ToString();
-                tb_MaGV3.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["maGiangVien1"].Value.ToString();
-                dt_NgTH2.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["ngayThucHien1"].Value.ToString();
+                tb_MaDT.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["maDeTai1"].Value.ToString();
+                tb_TenDT.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["tenDeTai1"].Value.ToString();
+                tb_LinhVuc.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["linhVuc1"].Value.ToString();
+                cb_CapDo.SelectedValue = guna2DataGridView1.Rows[e.RowIndex].Cells["capDo1"].Value.ToString();
+                tb_MaGV2.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["maGiangVien1"].Value.ToString();
+                dt_NgayTH.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["ngayThucHien1"].Value.ToString();
                 tb_LinkDeTai1.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["ngayThucHien1"].Value.ToString();
             }
         }
@@ -517,12 +557,12 @@ namespace QuanLyDeTaiKhoaHoc.GUI
         {
             if (e.RowIndex != -1)
             {
-                tb_MaDT2.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["maDeTai1"].Value.ToString();
-                tb_TenDT2.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["tenDeTai1"].Value.ToString();
-                tb_LinhVuc2.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["linhVuc1"].Value.ToString();
-                cb_CapDo2.SelectedValue = guna2DataGridView1.Rows[e.RowIndex].Cells["capDo1"].Value.ToString();
-                tb_MaGV3.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["maGiangVien1"].Value.ToString();
-                dt_NgTH2.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["ngayThucHien1"].Value.ToString();
+                tb_MaDT.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["maDeTai1"].Value.ToString();
+                tb_TenDT.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["tenDeTai1"].Value.ToString();
+                tb_LinhVuc.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["linhVuc1"].Value.ToString();
+                cb_CapDo.SelectedValue = guna2DataGridView1.Rows[e.RowIndex].Cells["capDo1"].Value.ToString();
+                tb_MaGV2.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["maGiangVien1"].Value.ToString();
+                dt_NgayTH.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["ngayThucHien1"].Value.ToString();
                 tb_LinkDeTai1.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["ngayThucHien1"].Value.ToString();
             }
         }
@@ -534,6 +574,245 @@ namespace QuanLyDeTaiKhoaHoc.GUI
                 BUS_DETAI.Instance.AddHoiDong();
             }
             dgv_PhanCong.DataSource = BUS_DETAI.Instance.GetListHoiDong();
+        }
+
+        private void dgv_PhanCong_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tb_MaDeTaiPhanCong.Text = dgv_PhanCong.Rows[e.RowIndex].Cells["maDeTaiPC"].Value.ToString();
+            tb_MaHoiDongPhanCong.Text = dgv_PhanCong.Rows[e.RowIndex].Cells["maHoiDongPC"].Value.ToString();
+        }
+
+        private void dgv_PhanCong_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tb_MaDeTaiPhanCong.Text = dgv_PhanCong.Rows[e.RowIndex].Cells["maDeTaiPC"].Value.ToString();
+            tb_MaHoiDongPhanCong.Text = dgv_PhanCong.Rows[e.RowIndex].Cells["maHoiDongPC"].Value.ToString();
+         
+        }
+
+        private void cb_HopDong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cb_HopDong.DisplayMember = "tenHopDong";
+            cb_HopDong.ValueMember = "maHopDong";
+        }
+
+        private void cb_Khoabc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cb_Khoabc.DisplayMember = "tenKhoa";
+            cb_Khoabc.ValueMember = "maKhoa";
+        }
+
+        private void cb_TinhTrangbc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cb_TinhTrangbc.DisplayMember = "tenTrangThai";
+            cb_TinhTrangbc.ValueMember = "maTrangThai";
+        }
+
+        private void cb_DuyetTheo_TextChanged(object sender, EventArgs e)
+        {
+            if (cb_DuyetTheo.Text == "Năm, khoa")
+            {
+                cb_Khoabc.Visible = true;
+                tb_Nambc.Visible = true;
+                cb_TinhTrangbc.Visible = false;
+                cb_KetQuabc.Visible = false;
+                tb_Linhvucbc.Visible = false;
+                tb_TenGVbc.Visible = false;
+                tb_MaDTbc.Visible = false;
+            }
+        }
+
+        private void cb_DuyetTheo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cb_DuyetTheo.Text == "Năm, khoa")
+            {
+                cb_Khoabc.Visible = true;
+                tb_Nambc.Visible = true;
+                label_Khoa.Visible = true;
+                label_Nam.Visible = true;
+
+                cb_TinhTrangbc.Visible = false;
+                label_TinhTrang.Visible = false;
+                cb_KetQuabc.Visible = false;
+                label_KetQua.Visible = false;
+                tb_Linhvucbc.Visible = false;
+                label_LinhVuc.Visible = false;
+                tb_TenGVbc.Visible = false;
+                label_TenGV.Visible = false;
+                tb_MaDTbc.Visible = false;
+                label_MaDT.Visible = false;
+            }
+           
+                if(cb_DuyetTheo.Text == "Kết quả")
+            {
+                cb_Khoabc.Visible = false;
+                tb_Nambc.Visible = false;
+                label_Khoa.Visible = false;
+                label_Nam.Visible = false;
+
+                cb_TinhTrangbc.Visible = false;
+                label_TinhTrang.Visible = false;
+                cb_KetQuabc.Visible = true;
+                label_KetQua.Visible = true;
+                tb_Linhvucbc.Visible = false;
+                label_LinhVuc.Visible = false;
+                tb_TenGVbc.Visible = false;
+                label_TenGV.Visible = false;
+                tb_MaDTbc.Visible = false;
+                label_MaDT.Visible = false;
+            }
+                if (cb_DuyetTheo.Text == "Hội đồng nghiệm thu")
+
+            {
+                cb_Khoabc.Visible = false;
+                tb_Nambc.Visible = false;
+                label_Khoa.Visible = false;
+                label_Nam.Visible = false;
+
+                cb_TinhTrangbc.Visible = false;
+                label_TinhTrang.Visible = false;
+                cb_KetQuabc.Visible = false;
+                label_KetQua.Visible = false;
+                tb_Linhvucbc.Visible = false;
+                label_LinhVuc.Visible = false;
+                tb_TenGVbc.Visible = false;
+                label_TenGV.Visible = false;
+                tb_MaDTbc.Visible = true;
+                label_MaDT.Visible = true;
+            }
+            if (cb_DuyetTheo.Text == "Tình trạng")
+
+            {
+                cb_Khoabc.Visible = false;
+                tb_Nambc.Visible = false;
+                label_Khoa.Visible = false;
+                label_Nam.Visible = false;
+
+                cb_TinhTrangbc.Visible = true;
+                label_TinhTrang.Visible = true;
+                cb_KetQuabc.Visible = false;
+                label_KetQua.Visible = false;
+                tb_Linhvucbc.Visible = false;
+                label_LinhVuc.Visible = false;
+                tb_TenGVbc.Visible = false;
+                label_TenGV.Visible = false;
+                tb_MaDTbc.Visible = false;
+                label_MaDT.Visible = false;
+            }
+
+            if (cb_DuyetTheo.Text == "Lĩnh vực")
+
+            {
+                cb_Khoabc.Visible = false;
+                tb_Nambc.Visible = false;
+                label_Khoa.Visible = false;
+                label_Nam.Visible = false;
+
+                cb_TinhTrangbc.Visible = false;
+                label_TinhTrang.Visible = false;
+                cb_KetQuabc.Visible = false;
+                label_KetQua.Visible = false;
+                tb_Linhvucbc.Visible = true;
+                label_LinhVuc.Visible = true;
+                tb_TenGVbc.Visible = false;
+                label_TenGV.Visible = false;
+                tb_MaDTbc.Visible = false;
+                label_MaDT.Visible = false;
+            }
+
+            if (cb_DuyetTheo.Text == "Giảng viên")
+
+            {
+                cb_Khoabc.Visible = false;
+                tb_Nambc.Visible = false;
+                label_Khoa.Visible = false;
+                label_Nam.Visible = false;
+
+                cb_TinhTrangbc.Visible = false;
+                label_TinhTrang.Visible = false;
+                cb_KetQuabc.Visible = false;
+                label_KetQua.Visible = false;
+                tb_Linhvucbc.Visible = false;
+                label_LinhVuc.Visible = false;
+                tb_TenGVbc.Visible = true;
+                label_TenGV.Visible = true;
+                tb_MaDTbc.Visible = false;
+                label_MaDT.Visible = false;
+            }
+
+            if (cb_DuyetTheo.Text == "Trình độ")
+            {
+                cb_Khoabc.Visible = true;
+                tb_Nambc.Visible = true;
+                label_Khoa.Visible = true;
+                label_Nam.Visible = true;
+
+                cb_TinhTrangbc.Visible = false;
+                label_TinhTrang.Visible = false;
+                cb_KetQuabc.Visible = false;
+                label_KetQua.Visible = false;
+                tb_Linhvucbc.Visible = false;
+                label_LinhVuc.Visible = false;
+                tb_TenGVbc.Visible = false;
+                label_TenGV.Visible = false;
+                tb_MaDTbc.Visible = false;
+                label_MaDT.Visible = false;
+            }
+            if (cb_DuyetTheo.Text == "Chi tiết đề tài")
+            {
+                cb_Khoabc.Visible = false;
+                tb_Nambc.Visible = false;
+                label_Khoa.Visible = false;
+                label_Nam.Visible = false;
+
+                cb_TinhTrangbc.Visible = false;
+                label_TinhTrang.Visible = false;
+                cb_KetQuabc.Visible = false;
+                label_KetQua.Visible = false;
+                tb_Linhvucbc.Visible = false;
+                label_LinhVuc.Visible = false;
+                tb_TenGVbc.Visible = false;
+                label_TenGV.Visible = false;
+                tb_MaDTbc.Visible = true;
+                label_MaDT.Visible = true;
+            }
+
+
+        }
+
+        private void guna2GradientButton7_Click(object sender, EventArgs e)
+        {
+            if(cb_DuyetTheo.Text == "Năm, khoa")
+            {
+                dgv_BaoCao.DataSource = BUS_DETAI.Instance.BaoCaoNamKhoa();
+            }
+            if (cb_DuyetTheo.Text == "Kết quả")
+            {
+                dgv_BaoCao.DataSource = BUS_DETAI.Instance.BaoCaoLoai();
+            }
+            if (cb_DuyetTheo.Text == "Tình trạng")
+            {
+                dgv_BaoCao.DataSource = BUS_DETAI.Instance.BaoCaoTinhTrang();
+            }
+            if (cb_DuyetTheo.Text == "Lĩnh vực")
+            {
+                dgv_BaoCao.DataSource = BUS_DETAI.Instance.BaoCaoLinhVuc();
+            }
+            if (cb_DuyetTheo.Text == "Giảng viên")
+            {
+                dgv_BaoCao.DataSource = BUS_DETAI.Instance.BaoCaoGiangVienThucHienDeTai();
+            }
+            if (cb_DuyetTheo.Text == "Hội đồng nghiệm thu")
+            {
+                dgv_BaoCao.DataSource = BUS_HOIDONGNT.Instance.BaoCaoThanhVien();
+            }
+            if (cb_DuyetTheo.Text == "Trình độ")
+            {
+                dgv_BaoCao.DataSource = BUS_GIANGVIEN.Instance.BaoCaoTrinhDo();
+            }
+            if (cb_DuyetTheo.Text == "Chi tiết đề tài")
+            {
+                dgv_BaoCao.DataSource = BUS_DETAI.Instance.BaoCaoChiTiet(); ;
+            }
         }
 
         private void btn_SuaDT_Click(object sender, EventArgs e)
@@ -548,5 +827,7 @@ namespace QuanLyDeTaiKhoaHoc.GUI
             cb_Khoa1.DisplayMember = "tenKhoa";
             cb_Khoa1.ValueMember = "maKhoa";
         }
+
+
     }
 }
