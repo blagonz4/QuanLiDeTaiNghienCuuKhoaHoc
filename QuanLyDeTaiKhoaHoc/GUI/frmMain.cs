@@ -76,7 +76,7 @@ namespace QuanLyDeTaiKhoaHoc.GUI
             dgv_HD.DataSource = BUS_HOIDONGNT.Instance.GetListHOIDONGNT();
             dgv_BBNT.DataSource = BUS_BIENBANNT.Instance.GetListBBNT();
             dgv_GiaHan.DataSource = BUS_DONXINGIAHAN.Instance.GetListDXGH();
-
+            dgv_PhanCong.DataSource = BUS_DETAI.Instance.GetListHoiDong();
 
 
             // load combo box khoa
@@ -525,6 +525,15 @@ namespace QuanLyDeTaiKhoaHoc.GUI
                 dt_NgTH2.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["ngayThucHien1"].Value.ToString();
                 tb_LinkDeTai1.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["ngayThucHien1"].Value.ToString();
             }
+        }
+
+        private void btn_AddPhanCong_Click(object sender, EventArgs e)
+        {
+            if (BUS_DETAI.Instance.GetError())
+            {
+                BUS_DETAI.Instance.AddHoiDong();
+            }
+            dgv_PhanCong.DataSource = BUS_DETAI.Instance.GetListHoiDong();
         }
 
         private void btn_SuaDT_Click(object sender, EventArgs e)

@@ -47,3 +47,4 @@ C:\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.e
 C:\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.pdb
 C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.csprojAssemblyReference.cache
 C:\Users\COMPUTER\Desktop\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.GUI.Login.resources
+C:\Users\B365M AORUS ELite\QuanLiDeTaiNghienCuuKhoaHoc\QuanLyDeTaiKhoaHoc\obj\Debug\QuanLyDeTaiKhoaHoc.GUI.Login.resources

@@ -54,5 +54,17 @@ namespace QuanLyDeTaiKhoaHoc.BUS
         {
             DAL_DETAI.Instance.Updateketqua(ketQua);
         }
+        public void AddHoiDong()
+        {
+            DAL_DETAI.Instance.AddHoiDong();
+        }
+        public DataTable GetListHoiDong()
+        {
+            return DAL_DETAI.Instance.LoadListPhanCong();
+        }
+        public bool GetError()
+        {
+            return DAL_DETAI.Instance.GetError();
+        }
     }
 }
